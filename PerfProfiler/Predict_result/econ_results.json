@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "normalization": "one A16, same workload and local batch, fixed total work",
+  "rows": [
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.6285310983678875,
+      "predicted_estimated_econ": 0.5617071745561115,
+      "estimated_vs_measured_error_pct": 10.631760939959566
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.65734798784288,
+      "predicted_estimated_econ": 0.596869656764567,
+      "estimated_vs_measured_error_pct": 9.200352354736118
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.6761648773178723,
+      "predicted_estimated_econ": 0.6100230515502141,
+      "estimated_vs_measured_error_pct": 9.781907931985689
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.35962946625496245,
+      "predicted_estimated_econ": 0.3762894483723339,
+      "estimated_vs_measured_error_pct": 4.63254090129539
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.3661485037252488,
+      "predicted_estimated_econ": 0.38190460194922404,
+      "estimated_vs_measured_error_pct": 4.303198856111767
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.4126675411955351,
+      "predicted_estimated_econ": 0.44226791572013135,
+      "estimated_vs_measured_error_pct": 7.1729350069165365
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.25041023378914873,
+      "predicted_estimated_econ": 0.24299657568944769,
+      "estimated_vs_measured_error_pct": 2.9606050789216187
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.2577565737622083,
+      "predicted_estimated_econ": 0.25012541954815,
+      "estimated_vs_measured_error_pct": 2.9606050789216187
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.31510291373526766,
+      "predicted_estimated_econ": 0.2846599612866574,
+      "estimated_vs_measured_error_pct": 9.661272911676978
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.6222222222222226,
+      "predicted_estimated_econ": 0.5546579531736979,
+      "estimated_vs_measured_error_pct": 10.858543239941454
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.6741898858742601,
+      "predicted_estimated_econ": 0.6019245475655206,
+      "estimated_vs_measured_error_pct": 10.718840466588864
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.7261575495262975,
+      "predicted_estimated_econ": 0.6446621995972969,
+      "estimated_vs_measured_error_pct": 11.222819343014944
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.6529914529914533,
+      "predicted_estimated_econ": 0.5784152512915206,
+      "estimated_vs_measured_error_pct": 11.420701045670324
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.7435094576037601,
+      "predicted_estimated_econ": 0.6740338209275989,
+      "estimated_vs_measured_error_pct": 9.34428418705966
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.834027462216067,
+      "predicted_estimated_econ": 0.7495891013844702,
+      "estimated_vs_measured_error_pct": 10.1241703249481
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.6313390313390315,
+      "predicted_estimated_econ": 0.5595276207831974,
+      "estimated_vs_measured_error_pct": 11.374460787498986
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.7379424568183733,
+      "predicted_estimated_econ": 0.6699670775524289,
+      "estimated_vs_measured_error_pct": 9.211474233237526
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.844545882297715,
+      "predicted_estimated_econ": 0.7630418842107435,
+      "estimated_vs_measured_error_pct": 9.650629977050807
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.6179846938775514,
+      "predicted_estimated_econ": 0.5542163026737836,
+      "estimated_vs_measured_error_pct": 10.318765470331037
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.6422007506984682,
+      "predicted_estimated_econ": 0.5830932595035989,
+      "estimated_vs_measured_error_pct": 9.203896309772752
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.6664168075193848,
+      "predicted_estimated_econ": 0.6024104701071495,
+      "estimated_vs_measured_error_pct": 9.604550288953128
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.5100765306122451,
+      "predicted_estimated_econ": 0.4557218059417284,
+      "estimated_vs_measured_error_pct": 10.656190082942008
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.5383719139445993,
+      "predicted_estimated_econ": 0.4823212433918102,
+      "estimated_vs_measured_error_pct": 10.411143133769961
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.5666672972769532,
+      "predicted_estimated_econ": 0.5119565584416315,
+      "estimated_vs_measured_error_pct": 9.65482552076451
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.5244897959183678,
+      "predicted_estimated_econ": 0.4693417129915361,
+      "estimated_vs_measured_error_pct": 10.514615032742213
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.554221678190533,
+      "predicted_estimated_econ": 0.49309563930100164,
+      "estimated_vs_measured_error_pct": 11.02916780323363
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.5839535604626979,
+      "predicted_estimated_econ": 0.5304789360382856,
+      "estimated_vs_measured_error_pct": 9.157341960898647
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.7825442726580104,
+      "predicted_estimated_econ": 0.7270181578522658,
+      "estimated_vs_measured_error_pct": 7.095587655014479
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.8149176816951729,
+      "predicted_estimated_econ": 0.7509643971366947,
+      "estimated_vs_measured_error_pct": 7.847821441969948
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.8492226778891184,
+      "predicted_estimated_econ": 0.7783334404259168,
+      "estimated_vs_measured_error_pct": 8.347544090486181
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.6432862416496252,
+      "predicted_estimated_econ": 0.6100407958548156,
+      "estimated_vs_measured_error_pct": 5.168064174597598
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.6686251774596119,
+      "predicted_estimated_econ": 0.6401835088419928,
+      "estimated_vs_measured_error_pct": 4.253753758672529
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.6938936569321917,
+      "predicted_estimated_econ": 0.6648486415504419,
+      "estimated_vs_measured_error_pct": 4.185802117022119
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 1,
+      "predicted_measured_econ": 0.5076772035520786,
+      "predicted_estimated_econ": 0.4860563591240601,
+      "estimated_vs_measured_error_pct": 4.258777876324437
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 2,
+      "predicted_measured_econ": 0.5289707386326827,
+      "predicted_estimated_econ": 0.5010821773368594,
+      "estimated_vs_measured_error_pct": 5.27223138427495
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "gpu_count": 4,
+      "predicted_measured_econ": 0.5489829205984034,
+      "predicted_estimated_econ": 0.5180410402815322,
+      "estimated_vs_measured_error_pct": 5.63621911646065
+    }
+  ],
+  "summary": {
+    "points": 36,
+    "estimated_vs_measured_error_pct": {
+      "min": 2.9606050789216187,
+      "max": 11.420701045670324,
+      "mean": 8.273538885660185,
+      "median": 9.277879210148594
+    }
+  },
+  "by_workload": {
+    "cycleGAN-Pytorch": {
+      "points": 9,
+      "estimated_vs_measured_error_pct": {
+        "min": 2.9606050789216187,
+        "max": 10.631760939959566,
+        "mean": 6.811686562280588,
+        "median": 7.1729350069165365
+      }
+    },
+    "ResNet50-Pytorch": {
+      "points": 9,
+      "estimated_vs_measured_error_pct": {
+        "min": 9.211474233237526,
+        "max": 11.420701045670324,
+        "mean": 10.436213733890074,
+        "median": 10.718840466588864
+      }
+    },
+    "Transformers-Pytorch": {
+      "points": 9,
+      "estimated_vs_measured_error_pct": {
+        "min": 9.157341960898647,
+        "max": 11.02916780323363,
+        "mean": 10.061166178156434,
+        "median": 10.318765470331037
+      }
+    },
+    "Qwen": {
+      "points": 9,
+      "estimated_vs_measured_error_pct": {
+        "min": 4.185802117022119,
+        "max": 8.347544090486181,
+        "mean": 5.785089068313656,
+        "median": 5.27223138427495
+      }
+    }
+  },
+  "worst_configuration": {
+    "workload": "ResNet50-Pytorch",
+    "batch_size": 256,
+    "gpu": "V100-SXM2-16GB",
+    "gpu_count": 1,
+    "estimated_vs_measured_error_pct": 11.420701045670324
+  }
+}

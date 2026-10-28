@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "parameter_basis": "relative_least_squares_on_parallel_estimate_time_normal_results.json",
+  "variability_basis": "recorded_iteration_blocks_and_assumed_run_conditions",
+  "groups": [
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "A16",
+      "compute_ratio": 0.9999999999999999,
+      "communication_ratio": 0.0044111160123511805,
+      "run_cv": 0.056,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "compute_ratio": 0.31009319721752643,
+      "communication_ratio": 0.08144012450011513,
+      "run_cv": 0.059,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "compute_ratio": 0.22612275735974263,
+      "communication_ratio": 0.014792877830188766,
+      "run_cv": 0.057,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "compute_ratio": 0.15035903538015383,
+      "communication_ratio": 0.004411116012351166,
+      "run_cv": 0.055,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "A16",
+      "compute_ratio": 0.9999999999999994,
+      "communication_ratio": 0.03561253561253599,
+      "run_cv": 0.052,
+      "communication_stage_cv": 0.035
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "P100-SXM2-16GB",
+      "compute_ratio": 0.426398061613281,
+      "communication_ratio": 0.03561253561253562,
+      "run_cv": 0.055,
+      "communication_stage_cv": 0.035
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "V100-SXM2-16GB",
+      "compute_ratio": 0.29624973562383444,
+      "communication_ratio": 0.03561253561253563,
+      "run_cv": 0.053,
+      "communication_stage_cv": 0.035
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "A100-PCIE-40GB",
+      "compute_ratio": 0.2109086423447237,
+      "communication_ratio": 0.03561253561253562,
+      "run_cv": 0.051,
+      "communication_stage_cv": 0.035
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "A16",
+      "compute_ratio": 0.9999999999999999,
+      "communication_ratio": 0.01594387755102042,
+      "run_cv": 0.054,
+      "communication_stage_cv": 0.036
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "P100-SXM2-16GB",
+      "compute_ratio": 0.40688177932741537,
+      "communication_ratio": 0.01594387755102049,
+      "run_cv": 0.057,
+      "communication_stage_cv": 0.036
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "V100-SXM2-16GB",
+      "compute_ratio": 0.2874178324501341,
+      "communication_ratio": 0.0159438775510204,
+      "run_cv": 0.055,
+      "communication_stage_cv": 0.036
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "A100-PCIE-40GB",
+      "compute_ratio": 0.20020937038928205,
+      "communication_ratio": 0.015943877551020356,
+      "run_cv": 0.053,
+      "communication_stage_cv": 0.036
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "A16",
+      "iteration_profile_gpu": "A16",
+      "parameter_basis": "A16_request_timing_and_configured_hardware_scaling",
+      "hardware_scaling": {
+        "serial_fraction": 0.2,
+        "compute_fraction": 0.3,
+        "compute_time_ratio": 1.0,
+        "memory_time_ratio": 1.0,
+        "communication_fraction": 0.04
+      },
+      "run_cv": 0.055,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "iteration_profile_gpu": "A16",
+      "parameter_basis": "A16_request_timing_and_configured_hardware_scaling",
+      "hardware_scaling": {
+        "serial_fraction": 0.2,
+        "compute_fraction": 0.3,
+        "compute_time_ratio": 0.4238679245283019,
+        "memory_time_ratio": 0.273224043715847,
+        "communication_fraction": 0.04
+      },
+      "run_cv": 0.058,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "iteration_profile_gpu": "A16",
+      "parameter_basis": "A16_request_timing_and_configured_hardware_scaling",
+      "hardware_scaling": {
+        "serial_fraction": 0.2,
+        "compute_fraction": 0.3,
+        "compute_time_ratio": 0.2861783439490446,
+        "memory_time_ratio": 0.2222222222222222,
+        "communication_fraction": 0.04
+      },
+      "run_cv": 0.056,
+      "communication_stage_cv": 0.037
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "iteration_profile_gpu": "A16",
+      "parameter_basis": "A16_request_timing_and_configured_hardware_scaling",
+      "hardware_scaling": {
+        "serial_fraction": 0.2,
+        "compute_fraction": 0.3,
+        "compute_time_ratio": 0.23041025641025642,
+        "memory_time_ratio": 0.12861736334405144,
+        "communication_fraction": 0.04
+      },
+      "run_cv": 0.054,
+      "communication_stage_cv": 0.037
+    }
+  ],
+  "iteration_profile_root": "Workloads/profile_results/benchmark"
+}

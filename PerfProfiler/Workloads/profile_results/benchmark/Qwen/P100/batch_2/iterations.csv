@@ -1,0 +1,11 @@
+iteration,latency_seconds,batch_size,input_tokens,output_tokens,generated_tokens,dtype,device,gpu
+1,1.202370197,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+2,1.205304973,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+3,1.211202323,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+4,1.222657040,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+5,1.216024548,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+6,1.216297947,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+7,1.211751945,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+8,1.213677153,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+9,1.214625858,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB
+10,1.206600644,2,64,32,64,fp16,cuda:0,Tesla P100-SXM2-16GB

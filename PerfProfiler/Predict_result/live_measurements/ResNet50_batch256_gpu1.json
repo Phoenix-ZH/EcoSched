@@ -1,0 +1,267 @@
+{
+  "origin": "nvml_workload_iteration_recording",
+  "econ_j": 61.47299502594109,
+  "econ_kwh": 1.7075831951650303e-05,
+  "sampled_energy_j": 61.47299502594109,
+  "sampled_steps": 10,
+  "gpu_count": 1,
+  "windows": [
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 4.551848580012698,
+          "mean_power_w": 43.79736352944419,
+          "max_sampling_gap_s": 0.07682373374700546,
+          "integrated_segments": 2
+        }
+      ],
+      "energy_per_distributed_step_j": 4.551848580012698
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 5.9813143618618945,
+          "mean_power_w": 56.537668373167186,
+          "max_sampling_gap_s": 0.08282475173473358,
+          "integrated_segments": 3
+        }
+      ],
+      "energy_per_distributed_step_j": 5.9813143618618945
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.17924356948934,
+          "mean_power_w": 58.505015813261814,
+          "max_sampling_gap_s": 0.08282475173473358,
+          "integrated_segments": 3
+        }
+      ],
+      "energy_per_distributed_step_j": 6.17924356948934
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.467915084205954,
+          "mean_power_w": 61.116481854081776,
+          "max_sampling_gap_s": 0.08774472773075104,
+          "integrated_segments": 3
+        }
+      ],
+      "energy_per_distributed_step_j": 6.467915084205954
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.445198059690603,
+          "mean_power_w": 60.95231438999611,
+          "max_sampling_gap_s": 0.09983914345502853,
+          "integrated_segments": 2
+        }
+      ],
+      "energy_per_distributed_step_j": 6.445198059690603
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.394739198730353,
+          "mean_power_w": 60.432839166163,
+          "max_sampling_gap_s": 0.09983914345502853,
+          "integrated_segments": 3
+        }
+      ],
+      "energy_per_distributed_step_j": 6.394739198730353
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.379160584823868,
+          "mean_power_w": 60.549694093866975,
+          "max_sampling_gap_s": 0.08471584692597389,
+          "integrated_segments": 3
+        }
+      ],
+      "energy_per_distributed_step_j": 6.379160584823868
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.501778594820737,
+          "mean_power_w": 61.52701013686636,
+          "max_sampling_gap_s": 0.08492514491081238,
+          "integrated_segments": 2
+        }
+      ],
+      "energy_per_distributed_step_j": 6.501778594820737
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.509955061432884,
+          "mean_power_w": 60.50796470382062,
+          "max_sampling_gap_s": 0.08492514491081238,
+          "integrated_segments": 3
+        }
+      ],
+      "energy_per_distributed_step_j": 6.509955061432884
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.061841930872763,
+          "mean_power_w": 56.57924457568489,
+          "max_sampling_gap_s": 0.08378982916474342,
+          "integrated_segments": 2
+        }
+      ],
+      "energy_per_distributed_step_j": 6.061841930872763
+    }
+  ],
+  "between_window_step_energy_stdev_j": 0.5911416901627063,
+  "normalized_econ": null,
+  "workload": "ResNet50",
+  "batch_size_per_gpu": 256,
+  "global_batch_size": 256,
+  "gpu_indices": [
+    0
+  ],
+  "iterations": 10,
+  "warmup_iterations": 10,
+  "sample_interval_s": 0.02,
+  "elapsed_s": 1.0584838762879372,
+  "iteration_durations_s": [
+    0.10392973944544792,
+    0.10579343885183334,
+    0.10561903938651085,
+    0.10582930967211723,
+    0.10574164614081383,
+    0.10581563413143158,
+    0.10535413399338722,
+    0.10567356646060944,
+    0.10758839920163155,
+    0.1071389690041542
+  ],
+  "energy_per_iteration_j": [
+    4.551848580012698,
+    5.9813143618618945,
+    6.17924356948934,
+    6.467915084205954,
+    6.445198059690603,
+    6.394739198730353,
+    6.379160584823868,
+    6.501778594820737,
+    6.509955061432884,
+    6.061841930872763
+  ],
+  "mean_power_w": 58.07645860560914,
+  "workload_config": {
+    "input_shape": [
+      256,
+      3,
+      32,
+      32
+    ],
+    "batch_size_per_gpu": 256
+  },
+  "device_records": [
+    {
+      "index": 0,
+      "name": "NVIDIA A16",
+      "uuid": "GPU-14bbb58e-fef1-d144-1908-6792cb6428a6",
+      "energy_j": 61.47299502594109,
+      "mean_power_w": 58.07645860560914,
+      "sample_count": 19,
+      "max_sampling_gap_s": 0.09983914345502853,
+      "mean_gpu_utilization_pct": 87.84210526315789,
+      "power_samples": [
+        {
+          "relative_time_s": -0.004022262990474701,
+          "power_w": 26.78
+        },
+        {
+          "relative_time_s": 0.028391391038894653,
+          "power_w": 46.11
+        },
+        {
+          "relative_time_s": 0.10521512478590012,
+          "power_w": 46.11
+        },
+        {
+          "relative_time_s": 0.1286463886499405,
+          "power_w": 58.612
+        },
+        {
+          "relative_time_s": 0.21147114038467407,
+          "power_w": 57.17
+        },
+        {
+          "relative_time_s": 0.23985405266284943,
+          "power_w": 57.17
+        },
+        {
+          "relative_time_s": 0.3170207142829895,
+          "power_w": 60.983
+        },
+        {
+          "relative_time_s": 0.34072360396385193,
+          "power_w": 60.983
+        },
+        {
+          "relative_time_s": 0.42846833169460297,
+          "power_w": 61.367
+        },
+        {
+          "relative_time_s": 0.5283074751496315,
+          "power_w": 60.468
+        },
+        {
+          "relative_time_s": 0.5517667047679424,
+          "power_w": 60.468
+        },
+        {
+          "relative_time_s": 0.6364825516939163,
+          "power_w": 60.372
+        },
+        {
+          "relative_time_s": 0.6999150663614273,
+          "power_w": 60.372
+        },
+        {
+          "relative_time_s": 0.7603117451071739,
+          "power_w": 61.909
+        },
+        {
+          "relative_time_s": 0.8452368900179863,
+          "power_w": 61.079
+        },
+        {
+          "relative_time_s": 0.9096544869244099,
+          "power_w": 61.079
+        },
+        {
+          "relative_time_s": 0.9761725477874279,
+          "power_w": 56.431
+        },
+        {
+          "relative_time_s": 1.0599623769521713,
+          "power_w": 56.304
+        },
+        {
+          "relative_time_s": 1.062954157590866,
+          "power_w": 56.304
+        }
+      ]
+    }
+  ],
+  "output": "Predict_result/live_measurements/ResNet50_batch256_gpu1.json"
+}

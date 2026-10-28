@@ -1,0 +1,538 @@
+record_type,paper_category,operator,input_shapes,calls,self_cuda_us,total_cuda_us,self_cpu_us,total_cpu_us,cpu_memory_bytes,cuda_memory_bytes
+aten_operator,Conv,aten::convolution_backward,"[[1, 256, 69, 69], [1, 256, 71, 71], [256, 256, 3, 3], [], [], [], [], [], [], [], []]",108,219018,223380,11220,129270,0,827177984
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 256, 71, 71], [256, 256, 3, 3], [], [], [], [], [], [], []]",108,96244,96244,4631,6027,0,527425536
+cuda_kernel_or_scope,Kernel,sm80_xmma_dgrad_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage4_warpsize2x2x1_g1_tensor16x8x8_t1r3s3_execute_kernel_cudnn,[],108,83624,83624,0,0,0,0
+cuda_kernel_or_scope,Kernel,sm86_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_alignc4_execute_kernel_cudnn,[],108,83188,83188,0,0,0,0
+cuda_kernel_or_scope,Kernel,ampere_sgemm_128x128_nt,[],108,66095,66095,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void cudnn::ops::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::ops::nchw2nhwc_params_t<float>, float const*, float*)",[],722,48216,48216,0,0,0,0
+cuda_kernel_or_scope,Kernel,Memcpy DtoD (Device -> Device),[],408,35764,35764,0,0,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 3, 276, 276], [1, 64, 282, 282], [3, 64, 7, 7], [], [], [], [], [], [], [], []]",6,35058,35166,708,7560,0,125446144
+cuda_kernel_or_scope,Kernel,"void at::native::batch_norm_backward_kernel<float, float, float, int>(at::GenericPackedTensorAccessor<float, 3ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 3ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 3ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::DefaultPtrTraits, int>, bool, float)",[],156,25371,25371,0,0,0,0
+cuda_kernel_or_scope,Kernel,sm80_xmma_wgrad_implicit_gemm_indexed_wo_smem_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize16x64x64_stage1_warpsize1x4x1_g1_tensor16x8x8_aligna4_alignc4_execute_kernel_cudnn,[],10,24796,24796,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void cudnn::winograd_nonfused::winogradWgradOutput4x4<float, float>(cudnn::winograd_nonfused::WinogradWgradOutputParams<float, float>)",[],108,23079,23079,0,0,0,0
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 64, 282, 282], [3, 64, 7, 7], [], [], [], [], [], [], []]",6,19521,19521,5874,12588,0,5486592
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::reflection_pad2d_backward_out_kernel<float>(float*, float const*, long, long, int, int, int, int, int, int, int)",[],116,18107,18107,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::reflection_pad2d_out_kernel<float>(float const*, float*, long, long, int, int, int, int, int, int, int)",[],120,18078,18078,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void cudnn::ops::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::ops::nhwc2nchw_params_t<float>, float const*, float*)",[],226,15678,15678,0,0,0,0
+aten_operator,Elemwise,aten::native_batch_norm,"[[1, 256, 69, 69], [], [], [], [], [], [], []]",114,15020,15020,3506,7264,0,556910592
+aten_operator,Other,aten::reflection_pad2d_backward,"[[1, 256, 71, 71], [1, 256, 69, 69], []]",108,14877,17965,699,23477,0,527388672
+aten_operator,Other,aten::reflection_pad2d,"[[1, 256, 69, 69], []]",108,14767,14767,1269,2655,0,581427200
+cuda_kernel_or_scope,Kernel,"void cudnn::winograd_nonfused::winogradWgradData4x4<float, float>(cudnn::winograd_nonfused::WinogradDataParams<float, float>)",[],108,13837,13837,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)",[],334,13264,13264,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::batch_norm_transform_input_kernel<float, float, float, true, int>(at::GenericPackedTensorAccessor<float, 3ul, at::RestrictPtrTraits, int>, at::GenericPackedTensorAccessor<float, 3ul, at::RestrictPtrTraits, int>, at::GenericPackedTensorAccessor<std::conditional<true, float, float>::type, 1ul, at::RestrictPtrTraits, int>, at::GenericPackedTensorAccessor<std::conditional<true, float, float>::type, 1ul, at::RestrictPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::RestrictPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::RestrictPtrTraits, int>, float)",[],156,13120,13120,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",[],174,12959,12959,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void cudnn::winograd_nonfused::winogradWgradDelta4x4<float, float>(cudnn::winograd_nonfused::WinogradDeltaParams<float, float>)",[],108,12781,12781,0,0,0,0
+aten_operator,Elemwise,aten::native_batch_norm_backward,"[[1, 256, 69, 69], [1, 256, 69, 69], [], [], [], [256], [256], [], [], []]",114,12209,12209,1714,20136,0,558934016
+aten_operator,Conv,aten::convolution_backward,"[[1, 128, 138, 138], [1, 64, 276, 276], [128, 64, 3, 3], [], [], [], [], [], [], [], []]",6,12198,12608,660,7450,0,119352320
+aten_operator,Elemwise,aten::copy_,"[[1, 256, 69, 69], [1, 256, 69, 69], []]",180,11948,11948,769,62380,0,-5161984
+cuda_kernel_or_scope,Kernel,"void at::native::batch_norm_collect_statistics_kernel<at::native::Var, float, float, float, int>(at::GenericPackedTensorAccessor<float, 3ul, at::RestrictPtrTraits, int>, float, float, at::GenericPackedTensorAccessor<float, 1ul, at::RestrictPtrTraits, int>, at::GenericPackedTensorAccessor<float, 1ul, at::RestrictPtrTraits, int>)",[],156,11668,11668,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::(anonymous namespace)::threshold_kernel_impl<float>(at::TensorIteratorBase&, float, float)::{lambda(float, float)#1}>, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::(anonymous namespace)::threshold_kernel_impl<float>(at::TensorIteratorBase&, float, float)::{lambda(float, float)#1}>, at::detail::Array<char*, 3>)",[],84,11650,11650,0,0,0,0
+cuda_kernel_or_scope,Kernel,sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel_cudnn,[],20,10218,10218,0,0,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params),[],18,10094,10094,0,0,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 64, 276, 276], [1, 128, 138, 138], [128, 64, 3, 3], [], [], [], [], [], [], [], []]",6,9656,10436,645,6608,0,60275712
+aten_operator,Elemwise,aten::copy_,"[[1, 64, 276, 276], [1, 64, 276, 276], []]",36,8716,8716,148,4398,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 512, 33, 33], [1, 256, 34, 34], [512, 256, 4, 4], [], [], [], [], [], [], [], []]",6,8464,8569,757,5217,0,43086848
+aten_operator,Conv,aten::convolution_backward,"[[1, 64, 276, 276], [1, 3, 282, 282], [64, 3, 7, 7], [], [], [], [], [], [], [], []]",6,8418,9191,476,7377,0,2139136
+aten_operator,Conv,aten::convolution_backward,"[[1, 256, 69, 69], [1, 128, 138, 138], [256, 128, 3, 3], [], [], [], [], [], [], [], []]",6,8374,8625,676,11444,0,65611776
+aten_operator,Elemwise,aten::native_batch_norm_backward,"[[1, 64, 276, 276], [1, 64, 276, 276], [], [], [], [64], [64], [], [], []]",12,8363,8363,190,686,0,234299392
+cuda_kernel_or_scope,Kernel,"void fft2d_r2c_32x32<float, false, 0u, false>(float2*, float const*, int, int, int, int, int, int, int, int, int, cudnn::reduced_divisor, bool, int2, int, int)",[],726,8248,8248,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::launch_clamp_scalar(at::TensorIteratorBase&, c10::Scalar, c10::Scalar, at::native::detail::ClampLimits)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",[],84,7945,7945,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)",[],232,7890,7890,0,0,0,0
+cuda_kernel_or_scope,Kernel,"std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, float2, float2, float2, float2, false, true, false, false, 5, false, cublasGemvParams<cublasGemvTensorStridedBatched<float2 const>, cublasGemvTensorStridedBatched<float2 const>, cublasGemvTensorStridedBatched<float2>, float2> >(cublasGemvParams<cublasGemvTensorStridedBatched<float2 const>, cublasGemvTensorStridedBatched<float2 const>, cublasGemvTensorStridedBatched<float2>, float2>)",[],726,7867,7867,0,0,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 128, 138, 138], [1, 256, 69, 69], [256, 128, 3, 3], [], [], [], [], [], [], [], []]",6,7862,8293,611,8529,0,36357120
+cuda_kernel_or_scope,Kernel,"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",[],164,7539,7539,0,0,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 256, 69, 69], [1, 256, 1, 1], []]",114,7381,7381,955,1491,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x4_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x4_nhwc_align4::Params),[],18,7027,7027,0,0,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_256x64_16x4_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_256x64_16x4_nhwc_unity_stride_align4::Params),[],6,6923,6923,0,0,0,0
+aten_operator,Conv,aten::cudnn_convolution_transpose,"[[1, 128, 138, 138], [128, 64, 3, 3], [], [], [], [], [], [], [], []]",6,6585,6585,291,400,0,117006336
+aten_operator,Elemwise,aten::native_batch_norm,"[[1, 64, 276, 276], [], [], [], [], [], [], []]",12,6080,6080,401,914,0,234024960
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params),[],12,5708,5708,0,0,0,0
+aten_operator,Elemwise,aten::threshold_backward,"[[1, 256, 69, 69], [1, 256, 69, 69], []]",60,5347,5347,713,7867,0,293949440
+cuda_kernel_or_scope,Kernel,sm86_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel_cudnn,[],12,4934,4934,0,0,0,0
+aten_operator,Elemwise,aten::add,"[[1, 256, 69, 69], [1, 256, 69, 69], []]",54,4868,4868,671,940,0,263264256
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 256, 34, 34], [512, 256, 4, 4], [], [], [], [], [], [], []]",6,4855,4855,295,1953,0,13717504
+aten_operator,Elemwise,aten::add_,"[[1, 256, 69, 69], [1, 256, 69, 69], []]",54,4766,4766,375,6177,0,0
+aten_operator,Other,aten::sum,"[[1, 256, 69, 69], [], [], []]",114,4613,4613,2296,17214,0,116736
+aten_operator,Elemwise,aten::copy_,"[[1, 128, 138, 138], [1, 128, 138, 138], []]",36,4541,4541,150,9518,0,0
+aten_operator,Conv,aten::cudnn_convolution_transpose,"[[1, 256, 69, 69], [256, 128, 3, 3], [], [], [], [], [], [], [], []]",6,4238,4238,295,410,0,58503168
+aten_operator,Elemwise,aten::threshold_backward,"[[1, 64, 276, 276], [1, 64, 276, 276], []]",12,4192,4192,146,1895,0,234299392
+cuda_kernel_or_scope,Kernel,sm86_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize64x128x32_stage2_warpsize2x2x1_g1_tensor16x8x8_alignc4_execute_kernel_cudnn,[],12,4116,4116,0,0,0,0
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 64, 276, 276], [128, 64, 3, 3], [], [], [], [], [], [], []]",6,4081,4081,308,400,0,58503168
+aten_operator,Elemwise,aten::copy_,"[[256, 69, 69], [256, 69, 69], []]",60,4061,4061,397,20724,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4::Params),[],6,3997,3997,0,0,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688fprop_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688fprop_optimized_tf32_64x64_32x5_nhwc_align4::Params),[],6,3945,3945,0,0,0,0
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 3, 282, 282], [64, 3, 7, 7], [], [], [], [], [], [], []]",6,3904,3904,308,383,0,117006336
+cuda_kernel_or_scope,Kernel,cudnn_ampere_scudnn_128x64_relu_interior_nn_v1,[],6,3858,3858,0,0,0,0
+aten_operator,Elemwise,aten::native_batch_norm_backward,"[[1, 128, 138, 138], [1, 128, 138, 138], [], [], [], [128], [128], [], [], []]",12,3825,3825,196,793,0,117006336
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 128, 138, 138], [256, 128, 3, 3], [], [], [], [], [], [], []]",6,3734,3734,285,402,0,30148608
+aten_operator,Conv,aten::convolution_backward,"[[1, 128, 69, 69], [1, 64, 138, 138], [128, 64, 4, 4], [], [], [], [], [], [], [], []]",6,3721,3825,547,5663,0,32534528
+aten_operator,Elemwise,aten::clamp_min_,"[[1, 256, 69, 69], []]",60,3660,3660,431,732,0,0
+cuda_kernel_or_scope,Kernel,"void cudnn::detail::dgrad_engine<float, 512, 6, 5, 3, 3, 3, false>(int, int, int, float const*, int, float const*, int, float*, kernel_grad_params, unsigned long long, int, unsigned long long, int, float, int, int, int)",[],4,3570,3570,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void fft2d_c2r_32x32<float, false, false, 0u, false, false>(float*, float2 const*, int, int, int, int, int, int, int, int, int, float, float, cudnn::reduced_divisor, bool, float*, float*, int2, int, int)",[],726,3302,3302,0,0,0,0
+aten_operator,Other,aten::reflection_pad2d_backward,"[[1, 64, 282, 282], [1, 64, 276, 276], []]",6,3178,3867,60,2374,0,117293056
+aten_operator,Other,aten::reflection_pad2d,"[[1, 64, 276, 276], []]",6,3148,3148,73,150,0,125215744
+cuda_kernel_or_scope,Kernel,"void cutlass_cudnn::Kernel<cutlass_cudnn::conv::kernel::ImplicitGemmConvolution<cutlass_cudnn::conv::threadblock::ImplicitGemmMultistage<cutlass_cudnn::gemm::GemmShape<64, 128, 32>, cutlass_cudnn::conv::threadblock::Conv2dWgradOutputGradientTileAccessIteratorOptimized<cutlass_cudnn::MatrixShape<64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<64, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, cutlass_cudnn::AlignedArray<cutlass_cudnn::tfloat32_t, 4, 16> >, cutlass_cudnn::transform::threadblock::RegularTileAccessIterator<cutlass_cudnn::MatrixShape<64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajorTensorOpMultiplicandCongruous<32, 32>, 1, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<64, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, 16>, (cutlass_cudnn::arch::CacheOperation::Kind)0, cutlass_cudnn::conv::threadblock::Conv2dWgradActivationTileAccessIteratorOptimized<cutlass_cudnn::MatrixShape<32, 128>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<128, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, cutlass_cudnn::AlignedArray<cutlass_cudnn::tfloat32_t, 4, 16> >, cutlass_cudnn::transform::threadblock::RegularTileAccessIterator<cutlass_cudnn::MatrixShape<32, 128>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajorTensorOpMultiplicandCongruous<32, 32>, 0, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<128, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, 16>, (cutlass_cudnn::arch::CacheOperation::Kind)0, cutlass_cudnn::gemm::threadblock::MmaPolicy<cutlass_cudnn::gemm::warp::MmaTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajorTensorOpMultiplicandCongruous<32, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajorTensorOpMultiplicandCongruous<32, 32>, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::gemm::warp::MmaTensorOpPolicy<cutlass_cudnn::arch::Mma<cutlass_cudnn::gemm::GemmShape<16, 8, 8>, 32, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajor, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::arch::OpMultiplyAdd>, cutlass_cudnn::MatrixShape<1, 1> >, 1, false, bool>, cutlass_cudnn::MatrixShape<0, 0>, cutlass_cudnn::MatrixShape<0, 0>, 1>, 3, bool>, cutlass_cudnn::epilogue::threadblock::Epilogue<cutlass_cudnn::gemm::GemmShape<64, 128, 32>, cutlass_cudnn::gemm::warp::MmaTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajorTensorOpMultiplicandCongruous<32, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajorTensorOpMultiplicandCongruous<32, 32>, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::gemm::warp::MmaTensorOpPolicy<cutlass_cudnn::arch::Mma<cutlass_cudnn::gemm::GemmShape<16, 8, 8>, 32, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajor, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::arch::OpMultiplyAdd>, cutlass_cudnn::MatrixShape<1, 1> >, 1, false, bool>, 1, cutlass_cudnn::epilogue::threadblock::PredicatedTileIterator<cutlass_cudnn::epilogue::threadblock::OutputTileOptimalThreadMap<cutlass_cudnn::epilogue::threadblock::OutputTileShape<128, 8, 2, 1, 1>, cutlass_cudnn::epilogue::threadblock::OutputTileShape<1, 4, 1, 1, 4>, 128, 4, 32>, float, false>, cutlass_cudnn::epilogue::warp::FragmentIteratorTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::gemm::GemmShape<16, 8, 8>, float, cutlass_cudnn::Array<float, 4, true>, cutlass_cudnn::layout::RowMajor>, cutlass_cudnn::epilogue::warp::TileIteratorTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::gemm::GemmShape<16, 8, 8>, float, cutlass_cudnn::layout::RowMajor>, cutlass_cudnn::epilogue::threadblock::SharedLoadIterator<cutlass_cudnn::epilogue::threadblock::OutputTileOptimalThreadMap<cutlass_cudnn::epilogue::threadblock::OutputTileShape<128, 8, 2, 1, 1>, cutlass_cudnn::epilogue::threadblock::OutputTileShape<1, 4, 1, 1, 4>, 128, 4, 32>::CompactedThreadMap, float, 16>, cutlass_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass_cudnn::FloatRoundStyle)2>, cutlass_cudnn::MatrixShape<0, 8>, 2, 1>, cutlass_cudnn::gemm::threadblock::GemmIdentityThreadblockSwizzle<4>, (cutlass_cudnn::conv::Operator)2, cutlass_cudnn::conv::Conv2dProblemSize> >(cutlass_cudnn::conv::kernel::ImplicitGemmConvolution<cutlass_cudnn::conv::threadblock::ImplicitGemmMultistage<cutlass_cudnn::gemm::GemmShape<64, 128, 32>, cutlass_cudnn::conv::threadblock::Conv2dWgradOutputGradientTileAccessIteratorOptimized<cutlass_cudnn::MatrixShape<64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<64, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, cutlass_cudnn::AlignedArray<cutlass_cudnn::tfloat32_t, 4, 16> >, cutlass_cudnn::transform::threadblock::RegularTileAccessIterator<cutlass_cudnn::MatrixShape<64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajorTensorOpMultiplicandCongruous<32, 32>, 1, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<64, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, 16>, (cutlass_cudnn::arch::CacheOperation::Kind)0, cutlass_cudnn::conv::threadblock::Conv2dWgradActivationTileAccessIteratorOptimized<cutlass_cudnn::MatrixShape<32, 128>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<128, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, cutlass_cudnn::AlignedArray<cutlass_cudnn::tfloat32_t, 4, 16> >, cutlass_cudnn::transform::threadblock::RegularTileAccessIterator<cutlass_cudnn::MatrixShape<32, 128>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajorTensorOpMultiplicandCongruous<32, 32>, 0, cutlass_cudnn::transform::PitchLinearWarpRakedThreadMap<cutlass_cudnn::PitchLinearShape<128, 32>, 128, cutlass_cudnn::PitchLinearShape<8, 4>, 4>, 16>, (cutlass_cudnn::arch::CacheOperation::Kind)0, cutlass_cudnn::gemm::threadblock::MmaPolicy<cutlass_cudnn::gemm::warp::MmaTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajorTensorOpMultiplicandCongruous<32, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajorTensorOpMultiplicandCongruous<32, 32>, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::gemm::warp::MmaTensorOpPolicy<cutlass_cudnn::arch::Mma<cutlass_cudnn::gemm::GemmShape<16, 8, 8>, 32, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajor, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::arch::OpMultiplyAdd>, cutlass_cudnn::MatrixShape<1, 1> >, 1, false, bool>, cutlass_cudnn::MatrixShape<0, 0>, cutlass_cudnn::MatrixShape<0, 0>, 1>, 3, bool>, cutlass_cudnn::epilogue::threadblock::Epilogue<cutlass_cudnn::gemm::GemmShape<64, 128, 32>, cutlass_cudnn::gemm::warp::MmaTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajorTensorOpMultiplicandCongruous<32, 32>, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajorTensorOpMultiplicandCongruous<32, 32>, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::gemm::warp::MmaTensorOpPolicy<cutlass_cudnn::arch::Mma<cutlass_cudnn::gemm::GemmShape<16, 8, 8>, 32, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::tfloat32_t, cutlass_cudnn::layout::ColumnMajor, float, cutlass_cudnn::layout::RowMajor, cutlass_cudnn::arch::OpMultiplyAdd>, cutlass_cudnn::MatrixShape<1, 1> >, 1, false, bool>, 1, cutlass_cudnn::epilogue::threadblock::PredicatedTileIterator<cutlass_cudnn::epilogue::threadblock::OutputTileOptimalThreadMap<cutlass_cudnn::epilogue::threadblock::OutputTileShape<128, 8, 2, 1, 1>, cutlass_cudnn::epilogue::threadblock::OutputTileShape<1, 4, 1, 1, 4>, 128, 4, 32>, float, false>, cutlass_cudnn::epilogue::warp::FragmentIteratorTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::gemm::GemmShape<16, 8, 8>, float, cutlass_cudnn::Array<float, 4, true>, cutlass_cudnn::layout::RowMajor>, cutlass_cudnn::epilogue::warp::TileIteratorTensorOp<cutlass_cudnn::gemm::GemmShape<32, 64, 32>, cutlass_cudnn::gemm::GemmShape<16, 8, 8>, float, cutlass_cudnn::layout::RowMajor>, cutlass_cudnn::epilogue::threadblock::SharedLoadIterator<cutlass_cudnn::epilogue::threadblock::OutputTileOptimalThreadMap<cutlass_cudnn::epilogue::threadblock::OutputTileShape<128, 8, 2, 1, 1>, cutlass_cudnn::epilogue::threadblock::OutputTileShape<1, 4, 1, 1, 4>, 128, 4, 32>::CompactedThreadMap, float, 16>, cutlass_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass_cudnn::FloatRoundStyle)2>, cutlass_cudnn::MatrixShape<0, 8>, 2, 1>, cutlass_cudnn::gemm::threadblock::GemmIdentityThreadblockSwizzle<4>, (cutlass_cudnn::conv::Operator)2, cutlass_cudnn::conv::Conv2dProblemSize>::Params)",[],6,3096,3096,0,0,0,0
+aten_operator,Other,aten::fill_,"[[1, 256, 69, 69], []]",108,3088,3088,596,8828,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 64, 276, 276], [1, 64, 1, 1], []]",12,3072,3072,118,179,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 256, 34, 34], [1, 128, 69, 69], [256, 128, 4, 4], [], [], [], [], [], [], [], []]",6,2946,3003,523,1958,0,25487360
+aten_operator,Elemwise,aten::copy_,"[[64, 276, 276], [64, 276, 276], []]",12,2908,2908,74,742,0,0
+aten_operator,Elemwise,aten::native_batch_norm,"[[1, 128, 138, 138], [], [], [], [], [], [], []]",12,2874,2874,375,772,0,117018624
+aten_operator,Elemwise,aten::clamp_min_,"[[1, 64, 276, 276], []]",12,2851,2851,86,150,0,0
+aten_operator,Elemwise,aten::_foreach_addcdiv_,"[[], [], [], []]",2,2696,2696,369,414,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float> >(at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 3>, at::native::(anonymous namespace)::PointwiseOpScalarListFunctor<float, 3, 3, 0>, std::divides<float>)",[],3,2696,2696,0,0,0,0
+aten_operator,Elemwise,aten::add_,"[[256, 256, 3, 3], [256, 256, 3, 3], []]",72,2648,2648,593,10131,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688fprop_optimized_tf32_64x128_16x6_nhwc_align4>(cutlass_tensorop_s1688fprop_optimized_tf32_64x128_16x6_nhwc_align4::Params),[],6,2414,2414,0,0,0,0
+aten_operator,Elemwise,aten::threshold_backward,"[[1, 128, 138, 138], [1, 128, 138, 138], []]",12,2111,2111,141,1697,0,117579776
+aten_operator,Elemwise,aten::_foreach_addcmul_,"[[], [], [], []]",2,2082,2082,338,379,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<3>, at::native::(anonymous namespace)::PointwiseOpScalarFunctor<float, 3, 3, 0>, std::multiplies<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<3>, at::native::(anonymous namespace)::PointwiseOpScalarFunctor<float, 3, 3, 0>, std::multiplies<float>, float)",[],3,2082,2082,0,0,0,0
+aten_operator,Other,aten::_foreach_lerp_,"[[], [], []]",2,2066,2066,147,251,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(anonymous namespace)::TernaryOpScalarFunctor<float, 2, 2, 0>, at::native::LerpFunctor<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(anonymous namespace)::TernaryOpScalarFunctor<float, 2, 2, 0>, at::native::LerpFunctor<float>, float)",[],3,2066,2066,0,0,0,0
+aten_operator,Other,aten::fill_,"[[1218816], []]",60,1790,1790,281,6174,0,0
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 64, 138, 138], [128, 64, 4, 4], [], [], [], [], [], [], []]",6,1774,1774,319,974,0,16069120
+aten_operator,Other,aten::sum,"[[1, 64, 276, 276], [], [], []]",12,1553,1553,231,1885,0,6144
+aten_operator,Elemwise,aten::add_,"[[1, 128, 138, 138], [1, 128, 1, 1], []]",12,1552,1552,103,164,0,0
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 128, 69, 69], [256, 128, 4, 4], [], [], [], [], [], [], []]",6,1545,1545,294,1125,0,7693824
+aten_operator,Elemwise,aten::copy_,"[[128, 138, 138], [128, 138, 138], []]",12,1522,1522,77,2806,0,0
+aten_operator,Elemwise,aten::clamp_min_,"[[1, 128, 138, 138], []]",12,1434,1434,80,141,0,0
+aten_operator,Elemwise,aten::_foreach_div_,"[[], []]",2,1404,1404,292,333,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 1>, at::native::(anonymous namespace)::BinaryOpScalarListFunctor<float, 1, 1, 0>, std::divides<float> >(at::native::(anonymous namespace)::TensorListScalarListMetadata<float, 1>, at::native::(anonymous namespace)::BinaryOpScalarListFunctor<float, 1, 1, 0>, std::divides<float>)",[],3,1404,1404,0,0,0,0
+aten_operator,Elemwise,aten::_foreach_add_,"[[], []]",4,1403,1403,652,3891,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(anonymous namespace)::BinaryOpScalarFunctor<float, 1, 1, 0>, std::plus<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(anonymous namespace)::BinaryOpScalarFunctor<float, 1, 1, 0>, std::plus<float>, float)",[],3,1403,1403,0,0,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 1, 32, 32], [1, 512, 33, 33], [1, 512, 4, 4], [], [], [], [], [], [], [], []]",6,1400,1416,621,5347,0,13643776
+aten_operator,Elemwise,aten::_foreach_mul_,"[[], []]",2,1400,1400,296,341,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(anonymous namespace)::BinaryOpScalarFunctor<float, 1, 1, 0>, std::multiplies<float>, float>(at::native::(anonymous namespace)::TensorListMetadata<1>, at::native::(anonymous namespace)::BinaryOpScalarFunctor<float, 1, 1, 0>, std::multiplies<float>, float)",[],3,1400,1400,0,0,0,0
+aten_operator,Other,aten::fill_,"[[4875264], []]",12,1396,1396,64,408,0,0
+aten_operator,Other,aten::_foreach_sqrt,[[]],2,1395,1395,653,2060,0,115152896
+cuda_kernel_or_scope,Kernel,"void at::native::(anonymous namespace)::multi_tensor_apply_kernel<at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(anonymous namespace)::UnaryOpFunctor<float, 2, 1, 1>, at::native::Sqrt<float> >(at::native::(anonymous namespace)::TensorListMetadata<2>, at::native::(anonymous namespace)::UnaryOpFunctor<float, 2, 1, 1>, at::native::Sqrt<float>)",[],3,1395,1395,0,0,0,0
+cuda_kernel_or_scope,Kernel,sm86_xmma_fprop_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel_cudnn,[],6,1162,1162,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::leaky_relu_backward_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::detail::Array<char*, 3> >(int, at::native::(anonymous namespace)::leaky_relu_backward_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::detail::Array<char*, 3>)",[],24,1144,1144,0,0,0,0
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 512, 33, 33], [1, 512, 4, 4], [], [], [], [], [], [], []]",6,968,968,451,956,0,24576
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x64_16x4_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x64_16x4_nhwc_align4::Params),[],4,932,932,0,0,0,0
+aten_operator,Conv,aten::convolution_backward,"[[1, 64, 138, 138], [1, 3, 276, 276], [64, 3, 4, 4], [], [], [], [], [], [], [], []]",6,861,1003,252,2662,0,1880064
+aten_operator,Other,aten::sum,"[[1, 128, 138, 138], [], [], []]",12,841,841,238,2203,0,6144
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::leaky_relu_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::leaky_relu_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",[],24,771,771,0,0,0,0
+cuda_kernel_or_scope,Kernel,Memset (Device),[],104,717,717,0,0,0,0
+aten_operator,Other,aten::fill_,"[[2437632], []]",12,697,697,69,1203,0,0
+aten_operator,Other,aten::fill_,"[[1, 64, 276, 276], []]",6,689,689,34,506,0,0
+cuda_kernel_or_scope,Kernel,sm86_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize64x32x64_stage2_warpsize2x2x1_g1_tensor16x8x8_execute_kernel_cudnn,[],6,672,672,0,0,0,0
+aten_operator,Elemwise,aten::copy_,"[[1, 128, 69, 69], [1, 128, 69, 69], []]",18,653,653,82,4668,0,0
+aten_operator,Elemwise,aten::copy_,"[[1, 512, 33, 33], [1, 512, 33, 33], []]",18,616,616,83,7924,0,0
+aten_operator,Elemwise,aten::native_batch_norm,"[[1, 512, 33, 33], [], [], [], [], [], [], []]",6,581,581,190,417,0,13871616
+aten_operator,Elemwise,aten::leaky_relu_backward,"[[1, 64, 138, 138], [1, 64, 138, 138], [], []]",6,516,516,70,930,0,31045632
+aten_operator,Conv,aten::cudnn_convolution,"[[1, 3, 276, 276], [64, 3, 4, 4], [], [], [], [], [], [], []]",6,477,477,361,634,0,30435328
+cuda_kernel_or_scope,Kernel,cudnn_ampere_scudnn_128x64_relu_small_nn_v1,[],6,459,459,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::batch_norm_calc_invstd(at::Tensor const&, at::Tensor const&, double)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::batch_norm_calc_invstd(at::Tensor const&, at::Tensor const&, double)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",[],156,450,450,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void wgrad_alg0_engine<float, 512, 6, 5, 3, 3, 3, false, 512>(int, int, int, float const*, int, float*, float const*, kernel_grad_params, unsigned long long, int, float, int, int, int, int)",[],4,447,447,0,0,0,0
+aten_operator,Elemwise,aten::native_batch_norm,"[[1, 128, 69, 69], [], [], [], [], [], [], []]",6,411,411,266,1771,0,17957888
+aten_operator,Elemwise,aten::native_batch_norm_backward,"[[1, 512, 33, 33], [1, 512, 33, 33], [], [], [], [512], [512], [], [], []]",6,397,397,116,1958,0,13847040
+aten_operator,Elemwise,aten::add_,"[[1, 64, 138, 138], [1, 64, 1, 1], []]",6,378,378,79,1482,0,0
+cuda_kernel_or_scope,Kernel,void cutlass_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x4_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x4_nhwc_unity_stride_align4::Params),[],6,364,364,0,0,0,0
+aten_operator,Elemwise,aten::leaky_relu_,"[[1, 64, 138, 138], []]",6,362,362,126,444,0,0
+aten_operator,Elemwise,aten::native_batch_norm_backward,"[[1, 128, 69, 69], [1, 128, 69, 69], [], [], [], [128], [128], [], [], []]",6,350,350,100,1222,0,17951744
+aten_operator,Elemwise,aten::add_,"[[512, 256, 4, 4], [512, 256, 4, 4], []]",2,293,293,17,145,0,0
+aten_operator,Elemwise,aten::leaky_relu_backward,"[[1, 128, 69, 69], [1, 128, 69, 69], [], []]",6,277,277,73,1897,0,15522816
+aten_operator,Elemwise,aten::native_batch_norm,"[[1, 256, 34, 34], [], [], [], [], [], [], []]",6,272,272,187,1718,0,8054784
+aten_operator,Elemwise,aten::copy_,"[[1, 256, 34, 34], [1, 256, 34, 34], []]",18,263,263,76,4312,0,0
+aten_operator,Elemwise,aten::leaky_relu_backward,"[[1, 512, 33, 33], [1, 512, 33, 33], [], []]",6,255,255,76,340,0,13607936
+cuda_kernel_or_scope,Kernel,"void tensorTransformGeneric<float, float, float, true, false, false, (cudnnKernelDataType_t)2>(cudnnTensorTransformStruct, tensorTransformParams, int, unsigned long, float const*, float*, float, float)",[],18,233,233,0,0,0,0
+aten_operator,Elemwise,aten::native_batch_norm_backward,"[[1, 256, 34, 34], [1, 256, 34, 34], [], [], [], [256], [256], [], [], []]",6,227,227,102,529,0,8042496
+aten_operator,Elemwise,aten::copy_,"[[128, 69, 69], [128, 69, 69], []]",6,225,225,37,524,0,0
+aten_operator,Elemwise,aten::add_,"[[256], [256], []]",78,224,224,358,13066,0,0
+aten_operator,Elemwise,aten::copy_,"[[512, 33, 33], [512, 33, 33], []]",6,212,212,49,759,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 512, 33, 33], [1, 512, 1, 1], []]",6,193,193,55,103,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 128, 69, 69], [1, 128, 1, 1], []]",6,187,187,60,196,0,0
+aten_operator,Elemwise,aten::leaky_relu_,"[[1, 128, 69, 69], []]",6,187,187,112,350,0,0
+aten_operator,Elemwise,aten::leaky_relu_,"[[1, 512, 33, 33], []]",6,175,175,102,202,0,0
+aten_operator,Other,aten::reflection_pad2d,"[[1, 3, 276, 276], []]",6,163,163,466,1393,0,5726208
+aten_operator,Other,aten::sum,"[[1, 64, 138, 138], [], [], []]",4,142,142,66,479,0,2048
+aten_operator,Elemwise,aten::add_,"[[256, 128, 3, 3], [256, 128, 3, 3], []]",8,131,131,66,575,0,0
+aten_operator,Other,aten::sum,"[[1, 3, 276, 276], [], [], []]",6,108,108,116,312,0,3072
+aten_operator,Other,aten::sum,"[[1, 512, 33, 33], [], [], []]",4,105,105,81,943,0,8192
+cuda_kernel_or_scope,Kernel,"void fft2d_r2c_32x32<float, false, 1u, true>(float2*, float const*, int, int, int, int, int, int, int, int, int, cudnn::reduced_divisor, bool, int2, int, int)",[],6,104,104,0,0,0,0
+aten_operator,Other,aten::sum,"[[1, 128, 69, 69], [], [], []]",4,104,104,82,252,0,2048
+aten_operator,Elemwise,aten::copy_,"[[256, 34, 34], [256, 34, 34], []]",6,99,99,39,2071,0,0
+aten_operator,Elemwise,aten::leaky_relu_backward,"[[1, 256, 34, 34], [1, 256, 34, 34], [], []]",6,96,96,70,818,0,7567360
+aten_operator,Elemwise,aten::add_,"[[1, 256, 34, 34], [1, 256, 1, 1], []]",6,93,93,55,824,0,0
+aten_operator,Elemwise,aten::tanh_backward,"[[1, 3, 276, 276], [1, 3, 276, 276]]",6,93,93,87,302,0,5486592
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::tanh_backward_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::detail::Array<char*, 3> >(int, at::native::tanh_backward_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::detail::Array<char*, 3>)",[],6,93,93,0,0,0,0
+aten_operator,Other,aten::fill_,"[[609408], []]",6,87,87,38,508,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 3, 276, 276], [1, 3, 1, 1], []]",6,85,85,87,125,0,0
+aten_operator,Elemwise,aten::add_,"[[256, 128, 4, 4], [256, 128, 4, 4], []]",2,73,73,16,25,0,0
+cuda_kernel_or_scope,Kernel,"void cutlass_cudnn::Kernel<cutlass_cudnn::reduction::kernel::ReduceSplitK<cutlass_cudnn::MatrixShape<4, 128>, cutlass_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass_cudnn::FloatRoundStyle)2>, cutlass_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4> >(cutlass_cudnn::reduction::kernel::ReduceSplitK<cutlass_cudnn::MatrixShape<4, 128>, cutlass_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass_cudnn::FloatRoundStyle)2>, cutlass_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4>::Params)",[],6,72,72,0,0,0,0
+aten_operator,Other,aten::fill_,"[[557568], []]",6,67,67,39,77,0,0
+cuda_kernel_or_scope,Kernel,"void cask_cudnn::computeOffsetsKernel<false, false>(cask_cudnn::ComputeOffsetsParams)",[],12,64,64,0,0,0,0
+aten_operator,Elemwise,aten::sub,"[[1, 3, 276, 276], [1, 3, 276, 276], []]",4,64,64,50,70,0,3657728
+aten_operator,Other,aten::sum,"[[1, 256, 34, 34], [], [], []]",4,57,57,77,225,0,4096
+cuda_kernel_or_scope,Kernel,"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::MeanOps<float, float, float, float>, unsigned int, float, 4>)",[],10,53,53,0,0,0,0
+aten_operator,Other,aten::reflection_pad2d_backward,"[[1, 3, 282, 282], [1, 3, 276, 276], []]",2,52,62,18,1550,0,1828864
+cuda_kernel_or_scope,Kernel,"void cudnn::ops::scalePackedTensor_kernel<float, float>(long, float*, float)",[],4,51,51,0,0,0,0
+aten_operator,Elemwise,aten::add_,"[[128, 64, 3, 3], [128, 64, 3, 3], []]",8,50,50,67,1259,0,0
+aten_operator,Elemwise,aten::leaky_relu_,"[[1, 256, 34, 34], []]",6,47,47,102,383,0,0
+aten_operator,Elemwise,aten::mul,"[[1, 3, 276, 276], [1, 3, 276, 276]]",4,46,46,34,54,0,3657728
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 3>)",[],4,46,46,0,0,0,0
+aten_operator,Other,aten::sgn,"[[1, 3, 276, 276]]",4,45,45,36,60,0,3657728
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::sign_kernel_cuda(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::sign_kernel_cuda(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",[],4,45,45,0,0,0,0
+aten_operator,Elemwise,aten::tanh,"[[1, 3, 276, 276]]",6,43,43,116,153,0,5486592
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::tanh_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::tanh_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)",[],6,43,43,0,0,0,0
+aten_operator,Other,aten::fill_,"[[295936], []]",6,43,43,41,266,0,0
+aten_operator,Other,aten::mean,"[[1, 3, 276, 276], []]",4,37,37,93,131,0,2048
+aten_operator,Elemwise,aten::div,"[[1, 3, 276, 276], []]",4,31,31,68,93,0,3657728
+cuda_kernel_or_scope,Kernel,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",[],4,31,31,0,0,0,0
+aten_operator,Other,aten::abs,"[[1, 3, 276, 276], [0]]",4,25,25,34,68,0,3657728
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::AbsFunctor<float>, at::detail::Array<char*, 2> >(int, at::native::AbsFunctor<float>, at::detail::Array<char*, 2>)",[],4,25,25,0,0,0,0
+aten_operator,Elemwise,aten::add_,"[[128], [128], []]",10,23,23,47,2534,0,0
+aten_operator,Elemwise,aten::add_,"[[64], [64], []]",10,22,22,43,1218,0,0
+aten_operator,Other,aten::fill_,"[[1, 1, 32, 32], []]",12,20,20,71,1012,0,0
+aten_operator,Other,aten::mean,"[[1, 1, 32, 32], [], [], [], []]",6,20,20,90,282,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 3, 276, 276], [1, 3, 276, 276], []]",2,20,20,11,273,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 1, 32, 32], [1, 1, 1, 1], []]",6,18,18,56,108,0,0
+cuda_kernel_or_scope,Kernel,"void nchwAddPaddingKernel<float, float, float, true, (cudnnKernelDataType_t)0>(int, int, int, int, int, int, int, int, float const*, float*, int, int, int, int, int, float, float, cudnn::reduced_divisor, cudnn::reduced_divisor, cudnn::reduced_divisor)",[],6,18,18,0,0,0,0
+aten_operator,Elemwise,aten::add_,"[[128, 64, 4, 4], [128, 64, 4, 4], []]",2,18,18,16,777,0,0
+aten_operator,Elemwise,aten::add,"[[], [], []]",8,17,17,88,172,0,4096
+aten_operator,Elemwise,aten::mul,"[[], []]",8,16,16,139,937,0,4096
+aten_operator,Other,aten::mse_loss_backward,"[[], [1, 1, 32, 32], [1, 1, 32, 32], [], [1, 1, 32, 32]]",6,16,16,1272,1513,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::AUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, at::detail::Array<char*, 2>)",[],8,16,16,0,0,0,0
+cuda_kernel_or_scope,Kernel,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::mse_backward_cuda_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float, float)#1}>(at::TensorIteratorBase&, at::native::mse_backward_cuda_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float, float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::mse_backward_cuda_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float, float)#1}>(at::TensorIteratorBase&, at::native::mse_backward_cuda_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float, float)#1} const&)::{lambda(int)#1})",[],6,16,16,0,0,0,0
+aten_operator,Other,aten::sum,"[[1, 1, 32, 32], [], [], []]",4,16,16,77,138,0,2048
+aten_operator,Other,aten::mse_loss,"[[1, 1, 32, 32], [1, 1, 32, 32], []]",6,12,32,153,771,0,24576
+cuda_kernel_or_scope,Kernel,"void at::native::vectorized_elementwise_kernel<4, at::native::mse_kernel_cuda(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::detail::Array<char*, 3> >(int, at::native::mse_kernel_cuda(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, at::detail::Array<char*, 3>)",[],6,12,12,0,0,0,0
+aten_operator,Elemwise,aten::add_,"[[64, 3, 7, 7], [64, 3, 7, 7], []]",4,12,12,32,240,0,0
+aten_operator,Other,aten::fill_,"[[1, 3, 276, 276], []]",2,10,10,12,109,0,0
+aten_operator,Elemwise,aten::add_,"[[3, 64, 7, 7], [3, 64, 7, 7], []]",4,8,8,30,128,0,0
+aten_operator,Elemwise,aten::add_,"[[3], [3], []]",4,8,8,20,174,0,0
+aten_operator,Elemwise,aten::add_,"[[64, 3, 4, 4], [64, 3, 4, 4], []]",2,6,6,14,52,0,0
+aten_operator,Elemwise,aten::add_,"[[512], [512], []]",2,5,5,10,806,0,0
+aten_operator,Elemwise,aten::add_,"[[1, 512, 4, 4], [1, 512, 4, 4], []]",2,4,4,21,55,0,0
+aten_operator,Elemwise,aten::add_,"[[1], [1], []]",2,4,4,9,17,0,0
+aten_operator,Other,aten::fill_,"[[], []]",2,3,3,12,101,0,0
+cuda_kernel_or_scope,Kernel,TARGET_ITERATION,[],1,0,230469,479499,557555,0,0
+cuda_kernel_or_scope,Kernel,Optimizer.zero_grad#Adam.zero_grad,[],2,0,0,449,449,0,-116647936
+aten_operator,Other,aten::pad,"[[1, 3, 276, 276], [], [], []]",6,0,163,20,1413,0,5726208
+aten_operator,Other,aten::empty,"[[], [], [], [], [], []]",1244,0,0,5664,5664,0,3308291584
+aten_operator,Other,aten::resize_,"[[0], [], []]",124,0,0,532,532,0,700540928
+cuda_kernel_or_scope,Kernel,cudaLaunchKernel,[],6059,0,0,297274,297274,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 3, 282, 282], [64, 3, 7, 7], [64], [], [], [], []]",6,0,5438,23,669,0,117006336
+aten_operator,Conv,aten::convolution,"[[1, 3, 282, 282], [64, 3, 7, 7], [64], [], [], [], [], [], []]",6,0,5438,69,646,0,117006336
+aten_operator,Conv,aten::_convolution,"[[1, 3, 282, 282], [64, 3, 7, 7], [64], [], [], [], [], [], [], [], [], [], []]",6,0,5438,73,577,0,117006336
+cuda_kernel_or_scope,Kernel,cudaStreamIsCapturing,[],506,0,0,14,14,0,0
+cuda_kernel_or_scope,Kernel,cudaStreamGetPriority,[],504,0,0,2,2,0,0
+cuda_kernel_or_scope,Kernel,cudaDeviceGetStreamPriorityRange,[],504,0,0,3,3,0,0
+cuda_kernel_or_scope,Kernel,cudaMemsetAsync,[],116,0,0,10124,10124,0,0
+aten_operator,Elemwise,aten::reshape,"[[64], []]",18,0,0,29,53,0,0
+aten_operator,Elemwise,aten::view,"[[64], []]",18,0,0,24,24,0,0
+aten_operator,Other,aten::instance_norm,"[[1, 64, 276, 276], [], [], [], [], [], [], [], []]",12,0,6080,-2,1205,0,234024960
+aten_operator,Elemwise,aten::view,"[[1, 64, 276, 276], []]",108,0,0,111,111,0,0
+aten_operator,Elemwise,aten::batch_norm,"[[1, 64, 276, 276], [], [], [], [], [], [], [], []]",12,0,5570,104,1054,0,234024960
+aten_operator,Elemwise,aten::_batch_norm_impl_index,"[[1, 64, 276, 276], [], [], [], [], [], [], [], []]",12,0,6080,62,1028,0,234024960
+aten_operator,Other,aten::empty_like,"[[1, 64, 276, 276], [], [], [], [], []]",42,0,0,101,322,0,819904512
+aten_operator,Other,aten::empty_strided,"[[], [], [], [], [], []]",498,0,0,3138,3138,464,1746914816
+aten_operator,Elemwise,aten::reshape,"[[1, 64, 276, 276], []]",60,0,0,72,107,0,0
+aten_operator,Elemwise,aten::relu_,"[[1, 64, 276, 276]]",12,0,2851,182,332,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 64, 276, 276], [128, 64, 3, 3], [128], [], [], [], []]",6,0,4852,20,622,0,58503168
+aten_operator,Conv,aten::convolution,"[[1, 64, 276, 276], [128, 64, 3, 3], [128], [], [], [], [], [], []]",6,0,4852,48,602,0,58503168
+aten_operator,Conv,aten::_convolution,"[[1, 64, 276, 276], [128, 64, 3, 3], [128], [], [], [], [], [], [], [], [], [], []]",6,0,4852,58,554,0,58503168
+aten_operator,Elemwise,aten::reshape,"[[128], []]",18,0,0,22,41,0,0
+aten_operator,Elemwise,aten::view,"[[128], []]",18,0,0,20,20,0,0
+aten_operator,Other,aten::instance_norm,"[[1, 128, 138, 138], [], [], [], [], [], [], [], []]",12,0,2874,77,1040,0,117018624
+aten_operator,Elemwise,aten::view,"[[1, 128, 138, 138], []]",108,0,0,97,97,0,0
+aten_operator,Elemwise,aten::batch_norm,"[[1, 128, 138, 138], [], [], [], [], [], [], [], []]",12,0,2874,21,902,0,117018624
+aten_operator,Elemwise,aten::_batch_norm_impl_index,"[[1, 128, 138, 138], [], [], [], [], [], [], [], []]",12,0,2874,56,881,0,117018624
+aten_operator,Other,aten::empty_like,"[[1, 128, 138, 138], [], [], [], [], []]",36,0,0,81,275,0,351019008
+aten_operator,Elemwise,aten::reshape,"[[1, 128, 138, 138], []]",60,0,0,67,103,0,0
+aten_operator,Elemwise,aten::relu_,"[[1, 128, 138, 138]]",12,0,1434,168,309,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 128, 138, 138], [256, 128, 3, 3], [256], [], [], [], []]",6,0,4138,32,636,0,30148608
+aten_operator,Conv,aten::convolution,"[[1, 128, 138, 138], [256, 128, 3, 3], [256], [], [], [], [], [], []]",6,0,4138,49,604,0,30148608
+aten_operator,Conv,aten::_convolution,"[[1, 128, 138, 138], [256, 128, 3, 3], [256], [], [], [], [], [], [], [], [], [], []]",6,0,4138,60,555,0,30148608
+cuda_kernel_or_scope,Kernel,cudaFuncSetAttribute,[],316,0,0,244,244,0,0
+aten_operator,Elemwise,aten::reshape,"[[256], []]",120,0,0,137,244,0,0
+aten_operator,Elemwise,aten::view,"[[256], []]",120,0,0,119,119,0,0
+aten_operator,Other,aten::instance_norm,"[[1, 256, 69, 69], [], [], [], [], [], [], [], []]",114,0,15020,398,9756,0,556910592
+aten_operator,Elemwise,aten::view,"[[1, 256, 69, 69], []]",1080,0,0,988,988,0,0
+aten_operator,Elemwise,aten::batch_norm,"[[1, 256, 69, 69], [], [], [], [], [], [], [], []]",114,0,14489,171,8461,0,556910592
+aten_operator,Elemwise,aten::_batch_norm_impl_index,"[[1, 256, 69, 69], [], [], [], [], [], [], [], []]",114,0,14368,832,8253,0,556910592
+aten_operator,Other,aten::empty_like,"[[1, 256, 69, 69], [], [], [], [], []]",396,0,0,927,2891,0,1946697728
+aten_operator,Elemwise,aten::reshape,"[[1, 256, 69, 69], []]",624,0,0,765,1122,0,0
+aten_operator,Elemwise,aten::relu_,"[[1, 256, 69, 69]]",60,0,3660,835,1567,0,0
+aten_operator,Other,aten::pad,"[[1, 256, 69, 69], [], [], []]",108,0,14767,239,2894,0,581427200
+aten_operator,Conv,aten::conv2d,"[[1, 256, 71, 71], [256, 256, 3, 3], [256], [], [], [], []]",108,0,100353,640,9951,0,527425536
+aten_operator,Conv,aten::convolution,"[[1, 256, 71, 71], [256, 256, 3, 3], [256], [], [], [], [], [], []]",108,0,103221,834,9579,0,527425536
+aten_operator,Conv,aten::_convolution,"[[1, 256, 71, 71], [256, 256, 3, 3], [256], [], [], [], [], [], [], [], [], [], []]",108,0,103157,1077,8731,0,527425536
+aten_operator,Conv,aten::conv_transpose2d,"[[1, 256, 69, 69], [256, 128, 3, 3], [128], [], [], [], [], []]",6,0,5019,19,632,0,58503168
+aten_operator,Conv,aten::convolution,"[[1, 256, 69, 69], [256, 128, 3, 3], [128], [], [], [], [], [], []]",6,0,5019,46,613,0,58503168
+aten_operator,Conv,aten::_convolution,"[[1, 256, 69, 69], [256, 128, 3, 3], [128], [], [], [], [], [], [], [], [], [], []]",6,0,5019,64,567,0,58503168
+aten_operator,Conv,aten::conv_transpose2d,"[[1, 128, 138, 138], [128, 64, 3, 3], [64], [], [], [], [], []]",6,0,8123,15,615,0,117006336
+aten_operator,Conv,aten::convolution,"[[1, 128, 138, 138], [128, 64, 3, 3], [64], [], [], [], [], [], []]",6,0,8123,50,600,0,117006336
+aten_operator,Conv,aten::_convolution,"[[1, 128, 138, 138], [128, 64, 3, 3], [64], [], [], [], [], [], [], [], [], [], []]",6,0,8123,59,550,0,117006336
+aten_operator,Other,aten::pad,"[[1, 64, 276, 276], [], [], []]",6,0,3148,13,163,0,125215744
+aten_operator,Conv,aten::conv2d,"[[1, 64, 282, 282], [3, 64, 7, 7], [3], [], [], [], []]",6,0,19606,23,12867,0,5486592
+aten_operator,Conv,aten::convolution,"[[1, 64, 282, 282], [3, 64, 7, 7], [3], [], [], [], [], [], []]",6,0,19606,48,12844,0,5486592
+aten_operator,Conv,aten::_convolution,"[[1, 64, 282, 282], [3, 64, 7, 7], [3], [], [], [], [], [], [], [], [], [], []]",6,0,19606,64,12796,0,5486592
+cuda_kernel_or_scope,Kernel,cudaStreamWaitEvent,[],822,0,0,18,18,0,0
+aten_operator,Elemwise,aten::reshape,"[[3], []]",6,0,0,12,18,0,0
+aten_operator,Elemwise,aten::view,"[[3], []]",6,0,0,7,7,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 3, 276, 276], [64, 3, 4, 4], [64], [], [], [], []]",6,0,855,26,2323,0,30435328
+aten_operator,Conv,aten::convolution,"[[1, 3, 276, 276], [64, 3, 4, 4], [64], [], [], [], [], [], []]",6,0,855,80,2297,0,30435328
+aten_operator,Conv,aten::_convolution,"[[1, 3, 276, 276], [64, 3, 4, 4], [64], [], [], [], [], [], [], [], [], [], []]",6,0,855,81,2217,0,30435328
+aten_operator,Conv,aten::conv2d,"[[1, 64, 138, 138], [128, 64, 4, 4], [128], [], [], [], []]",6,0,1961,24,1341,0,16069120
+aten_operator,Conv,aten::convolution,"[[1, 64, 138, 138], [128, 64, 4, 4], [128], [], [], [], [], [], []]",6,0,1961,55,1317,0,16069120
+aten_operator,Conv,aten::_convolution,"[[1, 64, 138, 138], [128, 64, 4, 4], [128], [], [], [], [], [], [], [], [], [], []]",6,0,1961,75,1262,0,16069120
+aten_operator,Other,aten::instance_norm,"[[1, 128, 69, 69], [], [], [], [], [], [], [], []]",6,0,411,52,1970,0,17957888
+aten_operator,Elemwise,aten::view,"[[1, 128, 69, 69], []]",54,0,0,74,74,0,0
+aten_operator,Elemwise,aten::batch_norm,"[[1, 128, 69, 69], [], [], [], [], [], [], [], []]",6,0,411,17,1865,0,17957888
+aten_operator,Elemwise,aten::_batch_norm_impl_index,"[[1, 128, 69, 69], [], [], [], [], [], [], [], []]",6,0,411,37,1848,0,17957888
+aten_operator,Other,aten::empty_like,"[[1, 128, 69, 69], [], [], [], [], []]",18,0,0,46,156,0,51837440
+aten_operator,Elemwise,aten::reshape,"[[1, 128, 69, 69], []]",30,0,0,39,58,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 128, 69, 69], [256, 128, 4, 4], [256], [], [], [], []]",6,0,1638,18,2095,0,7693824
+aten_operator,Conv,aten::convolution,"[[1, 128, 69, 69], [256, 128, 4, 4], [256], [], [], [], [], [], []]",6,0,1638,52,2077,0,7693824
+aten_operator,Conv,aten::_convolution,"[[1, 128, 69, 69], [256, 128, 4, 4], [256], [], [], [], [], [], [], [], [], [], []]",6,0,1638,63,2025,0,7693824
+aten_operator,Other,aten::instance_norm,"[[1, 256, 34, 34], [], [], [], [], [], [], [], []]",6,0,272,-37,1862,0,8054784
+aten_operator,Elemwise,aten::view,"[[1, 256, 34, 34], []]",54,0,0,55,55,0,0
+aten_operator,Elemwise,aten::batch_norm,"[[1, 256, 34, 34], [], [], [], [], [], [], [], []]",6,0,227,88,1784,0,8054784
+aten_operator,Elemwise,aten::_batch_norm_impl_index,"[[1, 256, 34, 34], [], [], [], [], [], [], [], []]",6,0,272,28,1774,0,8054784
+aten_operator,Other,aten::empty_like,"[[1, 256, 34, 34], [], [], [], [], []]",18,0,0,46,137,0,24420352
+aten_operator,Elemwise,aten::reshape,"[[1, 256, 34, 34], []]",30,0,0,35,52,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 256, 34, 34], [512, 256, 4, 4], [512], [], [], [], []]",6,0,5048,20,2198,0,13717504
+aten_operator,Conv,aten::convolution,"[[1, 256, 34, 34], [512, 256, 4, 4], [512], [], [], [], [], [], []]",6,0,5048,46,2178,0,13717504
+aten_operator,Conv,aten::_convolution,"[[1, 256, 34, 34], [512, 256, 4, 4], [512], [], [], [], [], [], [], [], [], [], []]",6,0,5048,63,2132,0,13717504
+aten_operator,Elemwise,aten::reshape,"[[512], []]",6,0,0,7,12,0,0
+aten_operator,Elemwise,aten::view,"[[512], []]",6,0,0,6,6,0,0
+aten_operator,Other,aten::instance_norm,"[[1, 512, 33, 33], [], [], [], [], [], [], [], []]",6,0,581,39,565,0,13871616
+aten_operator,Elemwise,aten::view,"[[1, 512, 33, 33], []]",54,0,0,55,55,0,0
+aten_operator,Elemwise,aten::batch_norm,"[[1, 512, 33, 33], [], [], [], [], [], [], [], []]",6,0,581,11,489,0,13871616
+aten_operator,Elemwise,aten::_batch_norm_impl_index,"[[1, 512, 33, 33], [], [], [], [], [], [], [], []]",6,0,581,33,478,0,13871616
+aten_operator,Other,aten::empty_like,"[[1, 512, 33, 33], [], [], [], [], []]",18,0,0,44,143,0,41075712
+aten_operator,Elemwise,aten::reshape,"[[1, 512, 33, 33], []]",30,0,0,44,61,0,0
+aten_operator,Conv,aten::conv2d,"[[1, 512, 33, 33], [1, 512, 4, 4], [1], [], [], [], []]",6,0,986,20,1217,0,24576
+aten_operator,Conv,aten::convolution,"[[1, 512, 33, 33], [1, 512, 4, 4], [1], [], [], [], [], [], []]",6,0,986,49,1197,0,24576
+aten_operator,Conv,aten::_convolution,"[[1, 512, 33, 33], [1, 512, 4, 4], [1], [], [], [], [], [], [], [], [], [], []]",6,0,986,70,1148,0,24576
+cuda_kernel_or_scope,Kernel,cudaDeviceGetAttribute,[],96,0,0,8,8,0,0
+cuda_kernel_or_scope,Kernel,cudaFuncGetAttributes,[],24,0,0,75,75,0,0
+cuda_kernel_or_scope,Kernel,cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags,[],216,0,0,17,17,0,0
+aten_operator,Elemwise,aten::reshape,"[[1], []]",6,0,0,8,14,0,0
+aten_operator,Elemwise,aten::view,"[[1], []]",6,0,0,6,6,0,0
+aten_operator,Other,aten::ones_like,"[[1, 1, 32, 32], [], [], [], [], []]",4,0,6,16,139,0,16384
+aten_operator,Other,aten::empty_like,"[[1, 1, 32, 32], [], [], [], [], []]",12,0,0,34,97,0,49152
+aten_operator,Other,aten::broadcast_tensors,[[]],10,0,0,3,3,0,0
+aten_operator,Other,aten::resize_,"[[1, 1, 32, 32], [], []]",6,0,0,8,8,0,0
+aten_operator,Other,aten::as_strided,"[[], [], [], []]",14,0,0,14,14,0,0
+aten_operator,Other,aten::l1_loss,"[[1, 3, 276, 276], [1, 3, 276, 276], []]",4,0,117,54,334,0,7317504
+aten_operator,Other,aten::abs,"[[1, 3, 276, 276]]",4,0,25,27,109,0,3657728
+aten_operator,Other,aten::ones_like,"[[], [], [], [], [], []]",2,0,2,95,122,0,1024
+aten_operator,Other,aten::empty_like,"[[], [], [], [], [], []]",2,0,0,6,16,0,1024
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: AddBackward0,[],62,0,0,332,358,0,0
+cuda_kernel_or_scope,Kernel,AddBackward0,[[]],8,0,0,5,5,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: MulBackward0,[],4,0,8,24,171,-32,2048
+cuda_kernel_or_scope,Kernel,MulBackward0,[[]],4,0,8,18,147,0,2048
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: MeanBackward0,[],4,0,31,22,164,0,-1024
+cuda_kernel_or_scope,Kernel,MeanBackward0,[[]],4,0,31,27,142,0,3657728
+aten_operator,Other,aten::expand,"[[], [], []]",4,0,0,16,22,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: AbsBackward0,[],4,0,91,24,156,0,-3657728
+cuda_kernel_or_scope,Kernel,AbsBackward0,"[[1, 3, 276, 276]]",4,0,91,18,132,0,4572160
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: SubBackward0,[],4,0,0,16,16,0,0
+cuda_kernel_or_scope,Kernel,SubBackward0,"[[1, 3, 276, 276]]",4,0,0,0,0,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: MseLossBackward0,[],6,0,27,55,2070,0,-1024
+cuda_kernel_or_scope,Kernel,MseLossBackward0,[[]],6,0,27,27,2015,0,24576
+aten_operator,Other,aten::mse_loss_backward,"[[], [1, 1, 32, 32], [1, 1, 32, 32], []]",6,0,27,35,1988,0,24576
+aten_operator,Other,aten::zeros_like,"[[1, 1, 32, 32], [], [], [], [], []]",8,0,12,45,1049,0,32768
+aten_operator,Other,aten::zero_,"[[1, 1, 32, 32]]",8,0,14,35,957,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: ConvolutionBackward0,[],174,0,329044,2919,234124,0,-591097344
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 1, 32, 32]]",6,0,1416,39,5386,0,13643776
+aten_operator,Other,aten::to,"[[1, 1, 32, 32], [], [], [], [], [], [], []]",6,0,0,3,3,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: AsStridedBackward0,[],102,0,13107,612,40516,0,2502144
+cuda_kernel_or_scope,Kernel,AsStridedBackward0,"[[1, 512, 33, 33]]",6,0,279,104,1089,0,14212096
+aten_operator,Other,aten::squeeze,"[[1, 512, 33, 33], []]",6,0,0,34,37,0,0
+aten_operator,Other,aten::as_strided,"[[1, 512, 33, 33], [], [], []]",12,0,0,9,9,0,0
+aten_operator,Other,aten::new_zeros,"[[512, 33, 33], [], [], [], [], []]",6,0,67,30,169,0,14212096
+aten_operator,Other,aten::new_empty,"[[512, 33, 33], [], [], [], [], []]",6,0,0,13,44,0,14212096
+aten_operator,Other,aten::zero_,[[557568]],6,0,67,18,95,0,0
+aten_operator,Other,aten::as_strided,"[[557568], [], [], []]",12,0,0,20,20,0,0
+cuda_kernel_or_scope,Kernel,cudaMemcpyAsync,[],408,0,0,118845,118845,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: torch::autograd::CopySlices,[],102,0,39015,953,112659,0,-686438400
+cuda_kernel_or_scope,Kernel,torch::autograd::CopySlices,"[[1, 512, 33, 33]]",6,0,871,102,8537,0,13510656
+aten_operator,Other,aten::new_empty_strided,"[[1, 512, 33, 33], [], [], [], [], [], []]",6,0,0,16,51,0,13510656
+aten_operator,Other,aten::clone,"[[1, 512, 33, 33], []]",6,0,207,27,4226,0,13381632
+cuda_kernel_or_scope,Kernel,LeakyReluBackward1,"[[1, 512, 33, 33]]",6,0,255,39,379,0,13607936
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: NativeBatchNormBackward0,[],156,0,25371,1522,27690,0,-680492544
+cuda_kernel_or_scope,Kernel,NativeBatchNormBackward0,"[[1, 512, 33, 33]]",6,0,397,37,1995,0,13847040
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: ViewBackward0,[],210,0,0,799,1917,0,0
+cuda_kernel_or_scope,Kernel,ViewBackward0,"[[1, 512, 33, 33]]",6,0,0,17,36,0,0
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 512, 33, 33]]",6,0,8569,34,5251,0,43086848
+aten_operator,Other,aten::to,"[[1, 512, 33, 33], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+cuda_kernel_or_scope,Kernel,AsStridedBackward0,"[[1, 256, 34, 34]]",6,0,142,93,2564,0,9538560
+aten_operator,Other,aten::squeeze,"[[1, 256, 34, 34], []]",6,0,0,31,33,0,0
+aten_operator,Other,aten::as_strided,"[[1, 256, 34, 34], [], [], []]",12,0,0,8,8,0,0
+aten_operator,Other,aten::new_zeros,"[[256, 34, 34], [], [], [], [], []]",6,0,43,25,350,0,9538560
+aten_operator,Other,aten::new_empty,"[[256, 34, 34], [], [], [], [], []]",6,0,0,12,42,0,9538560
+aten_operator,Other,aten::zero_,[[295936]],6,0,43,17,283,0,0
+aten_operator,Other,aten::as_strided,"[[295936], [], [], []]",12,0,0,17,17,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::CopySlices,"[[1, 256, 34, 34]]",6,0,359,89,5379,0,9102336
+aten_operator,Other,aten::new_empty_strided,"[[1, 256, 34, 34], [], [], [], [], [], []]",6,0,0,18,51,0,9102336
+aten_operator,Other,aten::clone,"[[1, 256, 34, 34], []]",6,0,90,32,1890,0,8335360
+cuda_kernel_or_scope,Kernel,LeakyReluBackward1,"[[1, 256, 34, 34]]",6,0,96,28,846,0,7567360
+cuda_kernel_or_scope,Kernel,NativeBatchNormBackward0,"[[1, 256, 34, 34]]",6,0,227,31,560,0,8042496
+cuda_kernel_or_scope,Kernel,ViewBackward0,"[[1, 256, 34, 34]]",6,0,0,12,30,0,0
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 256, 34, 34]]",6,0,3003,31,1989,0,25487360
+aten_operator,Other,aten::to,"[[1, 256, 34, 34], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+cuda_kernel_or_scope,Kernel,AsStridedBackward0,"[[1, 128, 69, 69]]",6,0,312,90,1246,0,16498176
+aten_operator,Other,aten::squeeze,"[[1, 128, 69, 69], []]",6,0,0,27,27,0,0
+aten_operator,Other,aten::as_strided,"[[1, 128, 69, 69], [], [], []]",12,0,0,7,7,0,0
+aten_operator,Other,aten::new_zeros,"[[128, 69, 69], [], [], [], [], []]",6,0,87,21,590,0,16498176
+aten_operator,Other,aten::new_empty,"[[128, 69, 69], [], [], [], [], []]",6,0,0,11,43,0,16498176
+aten_operator,Other,aten::zero_,[[609408]],6,0,87,18,526,0,0
+aten_operator,Other,aten::as_strided,"[[609408], [], [], []]",12,0,0,15,15,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::CopySlices,"[[1, 128, 69, 69]]",6,0,930,93,6814,0,16617472
+aten_operator,Other,aten::new_empty_strided,"[[1, 128, 69, 69], [], [], [], [], [], []]",6,0,0,20,48,0,16617472
+aten_operator,Other,aten::clone,"[[1, 128, 69, 69], []]",6,0,218,23,1356,0,15933952
+cuda_kernel_or_scope,Kernel,LeakyReluBackward1,"[[1, 128, 69, 69]]",6,0,277,28,1925,0,15522816
+cuda_kernel_or_scope,Kernel,NativeBatchNormBackward0,"[[1, 128, 69, 69]]",6,0,350,33,1255,0,17951744
+cuda_kernel_or_scope,Kernel,ViewBackward0,"[[1, 128, 69, 69]]",6,0,0,14,29,0,0
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 128, 69, 69]]",6,0,3825,33,5696,0,32534528
+aten_operator,Other,aten::to,"[[1, 128, 69, 69], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: LeakyReluBackward1,[],6,0,516,40,996,0,-29825024
+cuda_kernel_or_scope,Kernel,LeakyReluBackward1,"[[1, 64, 138, 138]]",6,0,516,26,956,0,31045632
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 64, 138, 138]]",6,0,1003,32,2694,0,1880064
+aten_operator,Other,aten::to,"[[1, 64, 138, 138], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: TanhBackward0,[],6,0,93,56,393,0,0
+cuda_kernel_or_scope,Kernel,TanhBackward0,"[[1, 3, 276, 276]]",6,0,93,35,337,0,5486592
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 3, 276, 276]]",6,0,35166,35,7595,0,125446144
+aten_operator,Other,aten::to,"[[1, 3, 276, 276], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+aten_operator,Other,aten::as_strided,"[[3], [], [], []]",6,0,0,6,6,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: ReflectionPad2DBackward0,[],116,0,26680,618,35410,0,-538397696
+cuda_kernel_or_scope,Kernel,ReflectionPad2DBackward0,"[[1, 64, 282, 282]]",6,0,3867,25,2399,0,117293056
+aten_operator,Other,aten::zeros_like,"[[1, 64, 276, 276], [], [], [], [], []]",6,0,689,20,588,0,117293056
+aten_operator,Other,aten::zero_,"[[1, 64, 276, 276]]",6,0,689,17,523,0,0
+cuda_kernel_or_scope,Kernel,AsStridedBackward0,"[[1, 64, 276, 276]]",12,0,4304,173,1573,0,234299392
+aten_operator,Other,aten::squeeze,"[[1, 64, 276, 276], []]",12,0,0,55,58,0,0
+aten_operator,Other,aten::as_strided,"[[1, 64, 276, 276], [], [], []]",24,0,0,17,17,0,0
+aten_operator,Other,aten::new_zeros,"[[64, 276, 276], [], [], [], [], []]",12,0,1396,36,567,0,234299392
+aten_operator,Other,aten::new_empty,"[[64, 276, 276], [], [], [], [], []]",12,0,0,29,79,0,234299392
+aten_operator,Other,aten::zero_,[[4875264]],12,0,1396,33,441,0,0
+aten_operator,Other,aten::as_strided,"[[4875264], [], [], []]",24,0,0,33,33,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::CopySlices,"[[1, 64, 276, 276]]",12,0,12908,170,6761,0,273874944
+aten_operator,Other,aten::new_empty_strided,"[[1, 64, 276, 276], [], [], [], [], [], []]",12,0,0,32,95,0,234872832
+aten_operator,Other,aten::clone,"[[1, 64, 276, 276], []]",12,0,2906,50,2303,0,234299392
+cuda_kernel_or_scope,Kernel,ReluBackward0,"[[1, 64, 276, 276]]",12,0,4192,56,1951,0,234299392
+cuda_kernel_or_scope,Kernel,NativeBatchNormBackward0,"[[1, 64, 276, 276]]",12,0,8363,63,749,0,234299392
+cuda_kernel_or_scope,Kernel,ViewBackward0,"[[1, 64, 276, 276]]",12,0,0,23,56,0,0
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 64, 276, 276]]",12,0,19627,65,14050,0,62414848
+aten_operator,Other,aten::as_strided,"[[64], [], [], []]",16,0,0,16,16,0,0
+cuda_kernel_or_scope,Kernel,AsStridedBackward0,"[[1, 128, 138, 138]]",12,0,2219,177,4469,0,117006336
+aten_operator,Other,aten::squeeze,"[[1, 128, 138, 138], []]",12,0,0,57,57,0,0
+aten_operator,Other,aten::as_strided,"[[1, 128, 138, 138], [], [], []]",24,0,0,12,12,0,0
+aten_operator,Other,aten::new_zeros,"[[128, 138, 138], [], [], [], [], []]",12,0,697,34,1366,0,117006336
+aten_operator,Other,aten::new_empty,"[[128, 138, 138], [], [], [], [], []]",12,0,0,32,83,0,117006336
+aten_operator,Other,aten::zero_,[[2437632]],12,0,697,35,1238,0,0
+aten_operator,Other,aten::as_strided,"[[2437632], [], [], []]",24,0,0,63,63,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::CopySlices,"[[1, 128, 138, 138]]",12,0,6652,175,11697,0,146544640
+aten_operator,Other,aten::new_empty_strided,"[[1, 128, 138, 138], [], [], [], [], [], []]",12,0,0,30,98,0,117006336
+aten_operator,Other,aten::clone,"[[1, 128, 138, 138], []]",12,0,1518,63,3883,0,117006336
+cuda_kernel_or_scope,Kernel,ReluBackward0,"[[1, 128, 138, 138]]",12,0,2111,51,1748,0,117579776
+cuda_kernel_or_scope,Kernel,NativeBatchNormBackward0,"[[1, 128, 138, 138]]",12,0,3825,67,860,0,117006336
+cuda_kernel_or_scope,Kernel,ViewBackward0,"[[1, 128, 138, 138]]",12,0,0,36,54,0,0
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 128, 138, 138]]",12,0,20901,63,16042,0,155709440
+aten_operator,Other,aten::as_strided,"[[128], [], [], []]",16,0,0,16,16,0,0
+cuda_kernel_or_scope,Kernel,AddBackward0,"[[1, 256, 69, 69]]",54,0,0,21,21,0,0
+cuda_kernel_or_scope,Kernel,ViewBackward0,"[[1, 256, 69, 69]]",168,0,0,360,831,0,0
+cuda_kernel_or_scope,Kernel,NativeBatchNormBackward0,"[[1, 256, 69, 69]]",114,0,12102,613,20719,0,558934016
+cuda_kernel_or_scope,Kernel,ConvolutionBackward0,"[[1, 256, 69, 69]]",114,0,232005,586,141300,0,892789760
+aten_operator,Other,aten::to,"[[1, 256, 69, 69], [], [], [], [], [], [], []]",114,0,0,2,2,0,0
+aten_operator,Other,aten::as_strided,"[[256], [], [], []]",118,0,0,119,119,0,0
+cuda_kernel_or_scope,Kernel,ReflectionPad2DBackward0,"[[1, 256, 71, 71]]",108,0,17457,909,23880,0,527388672
+aten_operator,Other,aten::zeros_like,"[[1, 256, 69, 69], [], [], [], [], []]",108,0,2919,562,10238,0,527388672
+aten_operator,Other,aten::zero_,"[[1, 256, 69, 69]]",108,0,3088,315,9143,0,0
+cuda_kernel_or_scope,Kernel,AsStridedBackward0,"[[1, 256, 69, 69]]",60,0,5851,576,28963,0,294809600
+aten_operator,Other,aten::squeeze,"[[1, 256, 69, 69], []]",60,0,0,286,304,0,0
+aten_operator,Other,aten::as_strided,"[[1, 256, 69, 69], [], [], []]",120,0,0,80,80,0,0
+aten_operator,Other,aten::new_zeros,"[[256, 69, 69], [], [], [], [], []]",60,0,1702,461,6928,0,294809600
+aten_operator,Other,aten::new_empty,"[[256, 69, 69], [], [], [], [], []]",60,0,0,126,382,0,294809600
+aten_operator,Other,aten::zero_,[[1218816]],60,0,1790,151,6325,0,0
+aten_operator,Other,aten::as_strided,"[[1218816], [], [], []]",120,0,0,166,166,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::CopySlices,"[[1, 256, 69, 69]]",60,0,17295,24,72518,0,361629696
+aten_operator,Other,aten::new_empty_strided,"[[1, 256, 69, 69], [], [], [], [], [], []]",60,0,0,166,469,0,293089280
+aten_operator,Other,aten::clone,"[[1, 256, 69, 69], []]",60,0,3932,1033,22762,0,303697920
+cuda_kernel_or_scope,Kernel,ReluBackward0,"[[1, 256, 69, 69]]",60,0,5347,268,8135,0,293949440
+aten_operator,Other,aten::to,"[[1, 128, 138, 138], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+aten_operator,Other,aten::to,"[[1, 64, 276, 276], [], [], [], [], [], [], []]",6,0,0,0,0,0,0
+cuda_kernel_or_scope,Kernel,ReflectionPad2DBackward0,"[[1, 3, 282, 282]]",2,0,62,7,1557,0,1828864
+aten_operator,Other,aten::zeros_like,"[[1, 3, 276, 276], [], [], [], [], []]",2,0,10,12,144,0,1828864
+aten_operator,Other,aten::empty_like,"[[1, 3, 276, 276], [], [], [], [], []]",2,0,0,7,17,0,1828864
+aten_operator,Other,aten::zero_,"[[1, 3, 276, 276]]",2,0,10,6,115,0,0
+cuda_kernel_or_scope,Kernel,autograd::engine::evaluate_function: torch::autograd::AccumulateGrad,[],116,0,0,463,1006,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[3, 64, 7, 7]]",2,0,0,12,20,0,0
+aten_operator,Other,aten::detach,"[[3, 64, 7, 7]]",2,0,0,3,8,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[3, 64, 7, 7]]",2,0,0,5,5,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,[[3]],2,0,0,4,6,0,0
+aten_operator,Other,aten::detach,[[3]],2,0,0,1,2,0,0
+cuda_kernel_or_scope,Kernel,detach,[[3]],2,0,0,1,1,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[128, 64, 3, 3]]",4,0,0,14,28,0,0
+aten_operator,Other,aten::detach,"[[128, 64, 3, 3]]",4,0,0,5,14,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[128, 64, 3, 3]]",4,0,0,9,9,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,[[64]],6,0,0,9,15,0,0
+aten_operator,Other,aten::detach,[[64]],6,0,0,4,6,0,0
+cuda_kernel_or_scope,Kernel,detach,[[64]],6,0,0,2,2,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[256, 128, 3, 3]]",4,0,0,13,26,0,0
+aten_operator,Other,aten::detach,"[[256, 128, 3, 3]]",4,0,0,8,15,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[256, 128, 3, 3]]",4,0,0,9,9,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,[[128]],6,0,0,8,14,0,0
+aten_operator,Other,aten::detach,[[128]],6,0,0,5,6,0,0
+cuda_kernel_or_scope,Kernel,detach,[[128]],6,0,0,1,1,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[256, 256, 3, 3]]",36,0,0,110,233,0,0
+aten_operator,Other,aten::detach,"[[256, 256, 3, 3]]",36,0,0,50,127,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[256, 256, 3, 3]]",36,0,0,77,77,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,[[256]],40,0,0,55,97,0,0
+aten_operator,Other,aten::detach,[[256]],40,0,0,36,42,0,0
+cuda_kernel_or_scope,Kernel,detach,[[256]],40,0,0,9,9,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[64, 3, 7, 7]]",2,0,0,6,12,0,0
+aten_operator,Other,aten::detach,"[[64, 3, 7, 7]]",2,0,0,2,6,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[64, 3, 7, 7]]",2,0,0,4,4,0,0
+cuda_kernel_or_scope,Kernel,Optimizer.step#Adam.step,[],2,0,12446,5324,13492,0,0
+aten_operator,Elemwise,aten::add_,"[[], [], []]",116,0,0,1327,3200,24,0
+aten_operator,Other,aten::to,"[[], [], [], [], []]",116,0,0,301,1873,464,0
+aten_operator,Other,aten::_to_copy,"[[], [], [], [], [], [], []]",116,0,0,1158,1572,464,0
+aten_operator,Elemwise,aten::copy_,"[[], [], []]",116,0,0,171,171,0,0
+aten_operator,Other,aten::result_type,"[[64, 3, 7, 7], []]",10,0,0,2,2,0,0
+aten_operator,Other,aten::result_type,"[[64], []]",30,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[128, 64, 3, 3], []]",20,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[128], []]",30,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[256, 128, 3, 3], []]",20,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[256], []]",200,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[256, 256, 3, 3], []]",180,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[3, 64, 7, 7], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[3], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::item,[[]],232,0,0,483,491,0,0
+aten_operator,Other,aten::_local_scalar_dense,[[]],232,0,0,8,8,0,0
+aten_operator,Other,aten::detach,"[[1, 3, 276, 276]]",2,0,0,6,14,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[1, 3, 276, 276]]",2,0,0,8,8,0,0
+aten_operator,Other,aten::as_strided,"[[1], [], [], []]",4,0,0,5,5,0,0
+aten_operator,Other,aten::as_strided,"[[512], [], [], []]",4,0,0,5,5,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[1, 512, 4, 4]]",2,0,0,9,18,0,0
+aten_operator,Other,aten::detach,"[[1, 512, 4, 4]]",2,0,0,3,9,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[1, 512, 4, 4]]",2,0,0,6,6,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,[[1]],2,0,0,2,6,0,0
+aten_operator,Other,aten::detach,[[1]],2,0,0,2,3,0,0
+cuda_kernel_or_scope,Kernel,detach,[[1]],2,0,0,2,2,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[512, 256, 4, 4]]",2,0,0,6,14,0,0
+aten_operator,Other,aten::detach,"[[512, 256, 4, 4]]",2,0,0,2,8,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[512, 256, 4, 4]]",2,0,0,6,6,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,[[512]],2,0,0,3,6,0,0
+aten_operator,Other,aten::detach,[[512]],2,0,0,1,3,0,0
+cuda_kernel_or_scope,Kernel,detach,[[512]],2,0,0,2,2,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[256, 128, 4, 4]]",2,0,0,6,14,0,0
+aten_operator,Other,aten::detach,"[[256, 128, 4, 4]]",2,0,0,3,8,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[256, 128, 4, 4]]",2,0,0,5,5,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[128, 64, 4, 4]]",2,0,0,6,13,0,0
+aten_operator,Other,aten::detach,"[[128, 64, 4, 4]]",2,0,0,3,7,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[128, 64, 4, 4]]",2,0,0,4,4,0,0
+cuda_kernel_or_scope,Kernel,torch::autograd::AccumulateGrad,"[[64, 3, 4, 4]]",2,0,0,5,10,0,0
+aten_operator,Other,aten::detach,"[[64, 3, 4, 4]]",2,0,0,2,5,0,0
+cuda_kernel_or_scope,Kernel,detach,"[[64, 3, 4, 4]]",2,0,0,3,3,0,0
+aten_operator,Other,aten::result_type,"[[64, 3, 4, 4], []]",10,0,0,3,3,0,0
+aten_operator,Other,aten::result_type,"[[128, 64, 4, 4], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[256, 128, 4, 4], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[512, 256, 4, 4], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[512], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[1, 512, 4, 4], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::result_type,"[[1], []]",10,0,0,0,0,0,0
+aten_operator,Other,aten::detach,[[]],2,0,0,8,22,0,0
+cuda_kernel_or_scope,Kernel,detach,[[]],2,0,0,14,14,0,0
+cuda_kernel_or_scope,Kernel,cudaDeviceSynchronize,[],1,0,0,110160,110160,0,0

@@ -1,0 +1,223 @@
+{
+  "gpu_power_w": {
+    "A16": 250,
+    "P100": 300,
+    "V100": 300,
+    "A100": 400
+  },
+  "templates": [
+    {
+      "name": "ResNet50",
+      "script": "ResNet50/resnet50_benchmark.py",
+      "batch_sizes": [
+        128,
+        256,
+        512
+      ],
+      "batch_unit": "images",
+      "workload_type": "training",
+      "execution_mode": "forward_loss_backward_sgd",
+      "precision": "fp32",
+      "optimizer_updates_per_iteration": 1,
+      "epoch_samples": 50000,
+      "epoch_unit": "training_corpus_pass",
+      "input_assumptions": {
+        "image_height": 32,
+        "image_width": 32,
+        "num_classes": 1000
+      },
+      "profile_config_fields": [
+        "image_height",
+        "image_width",
+        "amp",
+        "num_classes"
+      ],
+      "weight": 1,
+      "gradient_accumulation_steps": 1
+    },
+    {
+      "name": "CycleGAN",
+      "script": "CycleGAN/cyclegan_benchmark.py",
+      "batch_sizes": [
+        1,
+        2,
+        4
+      ],
+      "batch_unit": "image_pairs_one_per_domain",
+      "workload_type": "training",
+      "execution_mode": "generator_and_discriminator_training",
+      "precision": "fp32",
+      "optimizer_updates_per_iteration": 2,
+      "epoch_samples": 1000,
+      "epoch_unit": "training_corpus_pass",
+      "input_assumptions": {
+        "image_size": 128,
+        "base_channels": 32,
+        "residual_blocks": 9
+      },
+      "profile_config_fields": [
+        "image_size",
+        "base_channels",
+        "residual_blocks"
+      ],
+      "weight": 1,
+      "gradient_accumulation_steps": 1
+    },
+    {
+      "name": "Transformers",
+      "script": "Transformers/transformers_benchmark.py",
+      "batch_sizes": [
+        512,
+        1024,
+        2048
+      ],
+      "batch_unit": "sequences",
+      "workload_type": "training",
+      "execution_mode": "encoder_classification_adamw",
+      "precision": "fp32",
+      "optimizer_updates_per_iteration": 1,
+      "epoch_samples": 32768,
+      "epoch_unit": "training_corpus_pass",
+      "input_assumptions": {
+        "seq_len": 64,
+        "d_model": 128,
+        "nhead": 4,
+        "layers": 2,
+        "vocab_size": 4096,
+        "num_classes": 16
+      },
+      "profile_config_fields": [
+        "seq_len",
+        "d_model",
+        "nhead",
+        "layers",
+        "vocab_size",
+        "num_classes"
+      ],
+      "weight": 1,
+      "gradient_accumulation_steps": 1
+    },
+    {
+      "name": "Qwen",
+      "script": "Qwen/qwen3_1_7b_benchmark.py",
+      "batch_sizes": [
+        1,
+        2,
+        4
+      ],
+      "batch_unit": "requests",
+      "workload_type": "inference",
+      "execution_mode": "qwen3_1_7b_prefill_and_decode",
+      "precision": "fp16",
+      "optimizer_updates_per_iteration": 0,
+      "epoch_samples": 1024,
+      "epoch_unit": "inference_request_corpus_pass",
+      "input_assumptions": {
+        "input_tokens": 64,
+        "output_tokens": 32,
+        "dtype": "fp16"
+      },
+      "profile_config_fields": [
+        "input_tokens",
+        "output_tokens",
+        "dtype"
+      ],
+      "weight": 1,
+      "gradient_accumulation_steps": 1
+    }
+  ],
+  "hourly_task_counts": [
+    4000,
+    3800,
+    3600,
+    3400,
+    3200,
+    3000,
+    2800,
+    2600,
+    2400,
+    2900,
+    3400,
+    3900,
+    4400,
+    5500,
+    6000,
+    6500,
+    7000,
+    7500,
+    8000,
+    8500,
+    9000,
+    8000,
+    7000,
+    6000
+  ],
+  "trace_workload_templates": {
+    "resnet": "ResNet50",
+    "bert": "Transformers",
+    "nmt": "Transformers",
+    "xlnet": "Transformers"
+  },
+  "trace_gpu_profiles": {
+    "P100": "P100",
+    "V100": "V100",
+    "V100M32": "V100"
+  },
+  "unmatched_trace_gpu_profile": "A16",
+  "work_budget": {
+    "reference_runtime_min_s": 5000,
+    "reference_runtime_max_s": 15000,
+    "hourly_runtime_scale": [
+      0.27448529671671157,
+      0.30886530143616364,
+      0.314219475625891,
+      0.32649766734472035,
+      0.29353397208212656,
+      0.28573637277399005,
+      0.3089285138813464,
+      0.3134502669970777,
+      0.3119074918976382,
+      0.2962205610806855,
+      0.3182526894152398,
+      0.3019696833942055,
+      0.3058800896400448,
+      0.25682114449516785,
+      0.2978286763620902,
+      0.26294465282671264,
+      0.26990809181179454,
+      0.2249309449933517,
+      0.24304126448294922,
+      0.2400728379309348,
+      0.2021638625192131,
+      0.256993749145742,
+      0.24854112312029905,
+      0.2982333108867452
+    ],
+    "hourly_inference_weight": [
+      2.785747093192378,
+      2.199672009849075,
+      2.1086923169814313,
+      1.7974324989029136,
+      2.0125259410319547,
+      2.068505747681198,
+      1.7164366119388308,
+      1.5043414856671649,
+      1.7494558528311313,
+      2.03824438091066,
+      2.007971235571046,
+      2.174991188967776,
+      2.3659238528797815,
+      3.563456311922419,
+      3.901517047034972,
+      4.361483455868554,
+      5.46916661540357,
+      6.322636031038072,
+      5.97310435403357,
+      6.895658117170857,
+      9.492505158321775,
+      6.016050691119269,
+      5.571324072544592,
+      3.719222574020073
+    ]
+  }
+}

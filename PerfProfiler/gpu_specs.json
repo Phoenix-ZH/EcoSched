@@ -1,0 +1,69 @@
+{
+  "description": "Per physical GPU, not per four-GPU A16 board. Clocks are configured peak/boost assumptions, not measured application clocks. Resource occupancy is an approximation; target kernels may have different resource use.",
+  "sources": [
+    "https://images.nvidia.com/content/Solutions/data-center/vgpu-a16-datasheet.pdf",
+    "https://developer.nvidia.com/blog/inside-pascal/",
+    "https://www.nvidia.com/en-gb/data-center/tesla-v100/",
+    "https://developer.nvidia.com/blog/nvidia-ampere-architecture-in-depth/",
+    "https://docs.nvidia.com/cuda/archive/12.6.0/ampere-tuning-guide/index.html",
+    "https://docs.nvidia.com/cuda/volta-tuning-guide/"
+  ],
+  "gpus": {
+    "A16": {
+      "name": "NVIDIA A16",
+      "sm_count": 10,
+      "clock_mhz": 1755,
+      "bandwidth_gbps": 200,
+      "fp32_tflops": 4.493,
+      "memory_gb": 16,
+      "threads_per_sm": 1536,
+      "blocks_per_sm": 16,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 102400,
+      "shared_bytes_per_block": 101376,
+      "max_threads_per_block": 1024
+    },
+    "P100": {
+      "name": "Tesla P100-SXM2-16GB",
+      "sm_count": 56,
+      "clock_mhz": 1480,
+      "bandwidth_gbps": 732,
+      "fp32_tflops": 10.6,
+      "memory_gb": 16,
+      "threads_per_sm": 2048,
+      "blocks_per_sm": 32,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 65536,
+      "shared_bytes_per_block": 49152,
+      "max_threads_per_block": 1024
+    },
+    "V100": {
+      "name": "Tesla V100-SXM2-16GB",
+      "sm_count": 80,
+      "clock_mhz": 1530,
+      "bandwidth_gbps": 900,
+      "fp32_tflops": 15.7,
+      "memory_gb": 16,
+      "threads_per_sm": 2048,
+      "blocks_per_sm": 32,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 98304,
+      "shared_bytes_per_block": 98304,
+      "max_threads_per_block": 1024
+    },
+    "A100": {
+      "name": "NVIDIA A100-PCIE-40GB",
+      "sm_count": 108,
+      "clock_mhz": 1410,
+      "bandwidth_gbps": 1555,
+      "fp32_tflops": 19.5,
+      "memory_gb": 40,
+      "threads_per_sm": 2048,
+      "blocks_per_sm": 32,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 167936,
+      "shared_bytes_per_block": 166912,
+      "max_threads_per_block": 1024
+    }
+  }
+}

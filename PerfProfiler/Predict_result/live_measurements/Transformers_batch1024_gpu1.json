@@ -1,0 +1,403 @@
+{
+  "origin": "nvml_workload_iteration_recording",
+  "econ_j": 73.95035293099173,
+  "econ_kwh": 2.054176470305326e-05,
+  "sampled_energy_j": 73.95035293099173,
+  "sampled_steps": 10,
+  "gpu_count": 1,
+  "windows": [
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.573749679172877,
+          "mean_power_w": 51.60029305675231,
+          "max_sampling_gap_s": 0.026614084839820862,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 6.573749679172877
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 6.748598143376523,
+          "mean_power_w": 52.906146708738284,
+          "max_sampling_gap_s": 0.02635269984602928,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 6.748598143376523
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.124333622701466,
+          "mean_power_w": 63.30998726855853,
+          "max_sampling_gap_s": 0.03222072869539261,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 8.124333622701466
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.692417557461346,
+          "mean_power_w": 59.48770071611192,
+          "max_sampling_gap_s": 0.03222072869539261,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.692417557461346
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.106883991717879,
+          "mean_power_w": 55.0069545157816,
+          "max_sampling_gap_s": 0.027310088276863098,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.106883991717879
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.481550005588681,
+          "mean_power_w": 58.28361243685646,
+          "max_sampling_gap_s": 0.027518630027770996,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.481550005588681
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.910164155967533,
+          "mean_power_w": 61.675724780153885,
+          "max_sampling_gap_s": 0.025678209960460663,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.910164155967533
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.3686181692848995,
+          "mean_power_w": 56.70826102604242,
+          "max_sampling_gap_s": 0.026332005858421326,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.3686181692848995
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.04091311412765,
+          "mean_power_w": 54.92342019628137,
+          "max_sampling_gap_s": 0.0268971286714077,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.04091311412765
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 7.903124491592869,
+          "mean_power_w": 63.11110436983684,
+          "max_sampling_gap_s": 0.02662714198231697,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 7.903124491592869
+    }
+  ],
+  "between_window_step_energy_stdev_j": 0.5220506618585714,
+  "normalized_econ": null,
+  "workload": "Transformers",
+  "batch_size_per_gpu": 1024,
+  "global_batch_size": 1024,
+  "gpu_indices": [
+    0
+  ],
+  "iterations": 10,
+  "warmup_iterations": 10,
+  "sample_interval_s": 0.02,
+  "elapsed_s": 1.2817708812654018,
+  "iteration_durations_s": [
+    0.12739752605557442,
+    0.127557922154665,
+    0.12832625582814217,
+    0.12931105867028236,
+    0.12919973582029343,
+    0.12836455553770065,
+    0.12825409322977066,
+    0.12993906065821648,
+    0.12819509580731392,
+    0.12522557750344276
+  ],
+  "energy_per_iteration_j": [
+    6.573749679172877,
+    6.748598143376523,
+    8.124333622701466,
+    7.692417557461346,
+    7.106883991717879,
+    7.481550005588681,
+    7.910164155967533,
+    7.3686181692848995,
+    7.04091311412765,
+    7.903124491592869
+  ],
+  "mean_power_w": 57.693893668411135,
+  "workload_config": {
+    "input_shape": [
+      1024,
+      64
+    ],
+    "batch_size_per_gpu": 1024,
+    "d_model": 128,
+    "layers": 2
+  },
+  "device_records": [
+    {
+      "index": 0,
+      "name": "NVIDIA A16",
+      "uuid": "GPU-14bbb58e-fef1-d144-1908-6792cb6428a6",
+      "energy_j": 73.95035293099173,
+      "mean_power_w": 57.693893668411135,
+      "sample_count": 53,
+      "max_sampling_gap_s": 0.03222072869539261,
+      "mean_gpu_utilization_pct": 80.71698113207547,
+      "power_samples": [
+        {
+          "relative_time_s": -0.0033003687858581543,
+          "power_w": 27.265
+        },
+        {
+          "relative_time_s": 0.02158098667860031,
+          "power_w": 27.265
+        },
+        {
+          "relative_time_s": 0.04645366221666336,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.07306774705648422,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.09953375905752182,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.12345072254538536,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.14721066132187843,
+          "power_w": 50.064
+        },
+        {
+          "relative_time_s": 0.17356336116790771,
+          "power_w": 50.064
+        },
+        {
+          "relative_time_s": 0.19982416182756424,
+          "power_w": 50.064
+        },
+        {
+          "relative_time_s": 0.22399166971445084,
+          "power_w": 50.064
+        },
+        {
+          "relative_time_s": 0.24841555953025818,
+          "power_w": 64.791
+        },
+        {
+          "relative_time_s": 0.27392764016985893,
+          "power_w": 64.791
+        },
+        {
+          "relative_time_s": 0.2998986318707466,
+          "power_w": 64.791
+        },
+        {
+          "relative_time_s": 0.32394862174987793,
+          "power_w": 64.791
+        },
+        {
+          "relative_time_s": 0.3477056697010994,
+          "power_w": 60.79
+        },
+        {
+          "relative_time_s": 0.3736744374036789,
+          "power_w": 60.79
+        },
+        {
+          "relative_time_s": 0.4058951660990715,
+          "power_w": 60.79
+        },
+        {
+          "relative_time_s": 0.43583936244249344,
+          "power_w": 58.997
+        },
+        {
+          "relative_time_s": 0.4592524617910385,
+          "power_w": 58.997
+        },
+        {
+          "relative_time_s": 0.48261765390634537,
+          "power_w": 58.997
+        },
+        {
+          "relative_time_s": 0.5061995834112167,
+          "power_w": 58.997
+        },
+        {
+          "relative_time_s": 0.5328937470912933,
+          "power_w": 54.121
+        },
+        {
+          "relative_time_s": 0.5602038353681564,
+          "power_w": 54.121
+        },
+        {
+          "relative_time_s": 0.5841466002166271,
+          "power_w": 54.121
+        },
+        {
+          "relative_time_s": 0.6084740459918976,
+          "power_w": 54.121
+        },
+        {
+          "relative_time_s": 0.6338305398821831,
+          "power_w": 57.843
+        },
+        {
+          "relative_time_s": 0.6588704735040665,
+          "power_w": 57.843
+        },
+        {
+          "relative_time_s": 0.682708352804184,
+          "power_w": 57.843
+        },
+        {
+          "relative_time_s": 0.7064342051744461,
+          "power_w": 57.843
+        },
+        {
+          "relative_time_s": 0.7332067117094994,
+          "power_w": 58.964
+        },
+        {
+          "relative_time_s": 0.7607253417372704,
+          "power_w": 58.964
+        },
+        {
+          "relative_time_s": 0.7846641689538956,
+          "power_w": 58.964
+        },
+        {
+          "relative_time_s": 0.8081157207489014,
+          "power_w": 58.964
+        },
+        {
+          "relative_time_s": 0.833793930709362,
+          "power_w": 63.446
+        },
+        {
+          "relative_time_s": 0.8594631254673004,
+          "power_w": 63.446
+        },
+        {
+          "relative_time_s": 0.8829696588218212,
+          "power_w": 63.446
+        },
+        {
+          "relative_time_s": 0.9065611064434052,
+          "power_w": 63.446
+        },
+        {
+          "relative_time_s": 0.9320433959364891,
+          "power_w": 55.758
+        },
+        {
+          "relative_time_s": 0.9582029953598976,
+          "power_w": 55.758
+        },
+        {
+          "relative_time_s": 0.9830291382968426,
+          "power_w": 55.758
+        },
+        {
+          "relative_time_s": 1.007072038948536,
+          "power_w": 55.758
+        },
+        {
+          "relative_time_s": 1.0334040448069572,
+          "power_w": 51.647
+        },
+        {
+          "relative_time_s": 1.0593719333410263,
+          "power_w": 51.647
+        },
+        {
+          "relative_time_s": 1.0832680687308311,
+          "power_w": 51.647
+        },
+        {
+          "relative_time_s": 1.1072438694536686,
+          "power_w": 51.647
+        },
+        {
+          "relative_time_s": 1.1341409981250763,
+          "power_w": 63.254
+        },
+        {
+          "relative_time_s": 1.160002190619707,
+          "power_w": 63.254
+        },
+        {
+          "relative_time_s": 1.1835453510284424,
+          "power_w": 63.254
+        },
+        {
+          "relative_time_s": 1.2070375978946686,
+          "power_w": 63.254
+        },
+        {
+          "relative_time_s": 1.2330684401094913,
+          "power_w": 62.965
+        },
+        {
+          "relative_time_s": 1.2596955820918083,
+          "power_w": 62.965
+        },
+        {
+          "relative_time_s": 1.282944466918707,
+          "power_w": 62.965
+        },
+        {
+          "relative_time_s": 1.2872265204787254,
+          "power_w": 62.965
+        }
+      ]
+    }
+  ],
+  "output": "Predict_result/live_measurements/Transformers_batch1024_gpu1.json"
+}

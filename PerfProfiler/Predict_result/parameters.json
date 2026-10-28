@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "feature_version": 2,
+  "families": [
+    "conv_layout",
+    "conv_winograd",
+    "conv_tensor_fprop",
+    "conv_tensor_dgrad",
+    "conv_tensor_wgrad",
+    "conv_simt",
+    "gemm",
+    "elementwise",
+    "normalization",
+    "softmax",
+    "pool",
+    "reduction",
+    "memory",
+    "other",
+    "host_gap"
+  ],
+  "source_gpu": "A16",
+  "supported_workloads": [
+    "CycleGAN",
+    "ResNet50",
+    "Transformers",
+    "Qwen"
+  ],
+  "log_efficiency_coefficients": {
+    "P100": {
+      "conv_layout": 3.306204675637661,
+      "conv_winograd": -0.8130895678807188,
+      "conv_tensor_fprop": -3.5297559075545473,
+      "conv_tensor_dgrad": 1.171365688098161,
+      "conv_tensor_wgrad": -0.7487611682829709,
+      "conv_simt": -1.03810892713671,
+      "gemm": 0.31455176273501984,
+      "elementwise": 2.4814649466088268,
+      "normalization": -0.7019992827744393,
+      "softmax": 0.3852809964926679,
+      "pool": -0.028037214115929587,
+      "reduction": -1.687096744871891,
+      "memory": -0.041750443732569406,
+      "other": -1.5456448482164913,
+      "host_gap": 4.356259481552658
+    },
+    "V100": {
+      "conv_layout": 0.9901383412379634,
+      "conv_winograd": -6.3262937010812985,
+      "conv_tensor_fprop": -9.5702476366062,
+      "conv_tensor_dgrad": -7.573478074274645,
+      "conv_tensor_wgrad": 0.8437056132397566,
+      "conv_simt": 1.2617210880149416,
+      "gemm": -1.3168302546155548,
+      "elementwise": 5.32937401750759,
+      "normalization": 0.006594964631671751,
+      "softmax": -0.4565939179406248,
+      "pool": 0.4926818577109471,
+      "reduction": 1.0296565501766268,
+      "memory": 0.334640428485413,
+      "other": -3.9633497979929277,
+      "host_gap": 7.0442066701628105
+    },
+    "A100": {
+      "conv_layout": -2.3464119866508972,
+      "conv_winograd": -9.054506360049086,
+      "conv_tensor_fprop": -15.590248118514594,
+      "conv_tensor_dgrad": -2.4922477673147543,
+      "conv_tensor_wgrad": 0.8495018114561812,
+      "conv_simt": 1.2485316217229112,
+      "gemm": -3.139519383232736,
+      "elementwise": 10.24975758351084,
+      "normalization": 3.6505150776974036,
+      "softmax": -1.5068183774766712,
+      "pool": 0.46775701684152887,
+      "reduction": 23.75994148820535,
+      "memory": 1.2221701747275513,
+      "other": -8.424664079223083,
+      "host_gap": 3.6942435919018095
+    }
+  },
+  "fit_statistics": {
+    "P100": {
+      "ridge": 1e-06,
+      "iterations": 1,
+      "feature_rank": 9,
+      "samples": 9,
+      "parameter_count": 15,
+      "coefficient_l2_norm": 7.627213553283176,
+      "mean_error_to_actual_pct": 9.248354878825042
+    },
+    "V100": {
+      "ridge": 1e-06,
+      "iterations": 1,
+      "feature_rank": 9,
+      "samples": 9,
+      "parameter_count": 15,
+      "coefficient_l2_norm": 17.010057244807175,
+      "mean_error_to_actual_pct": 8.590979531361814
+    },
+    "A100": {
+      "ridge": 1e-06,
+      "iterations": 1,
+      "feature_rank": 9,
+      "samples": 9,
+      "parameter_count": 15,
+      "coefficient_l2_norm": 33.472644735475264,
+      "mean_error_to_actual_pct": 9.083513843126479
+    }
+  },
+  "hardware": {
+    "A16": {
+      "name": "NVIDIA A16",
+      "sm_count": 10,
+      "clock_mhz": 1755,
+      "bandwidth_gbps": 200,
+      "fp32_tflops": 4.493,
+      "memory_gb": 16,
+      "threads_per_sm": 1536,
+      "blocks_per_sm": 16,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 102400,
+      "shared_bytes_per_block": 101376,
+      "max_threads_per_block": 1024
+    },
+    "P100": {
+      "name": "Tesla P100-SXM2-16GB",
+      "sm_count": 56,
+      "clock_mhz": 1480,
+      "bandwidth_gbps": 732,
+      "fp32_tflops": 10.6,
+      "memory_gb": 16,
+      "threads_per_sm": 2048,
+      "blocks_per_sm": 32,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 65536,
+      "shared_bytes_per_block": 49152,
+      "max_threads_per_block": 1024
+    },
+    "V100": {
+      "name": "Tesla V100-SXM2-16GB",
+      "sm_count": 80,
+      "clock_mhz": 1530,
+      "bandwidth_gbps": 900,
+      "fp32_tflops": 15.7,
+      "memory_gb": 16,
+      "threads_per_sm": 2048,
+      "blocks_per_sm": 32,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 98304,
+      "shared_bytes_per_block": 98304,
+      "max_threads_per_block": 1024
+    },
+    "A100": {
+      "name": "NVIDIA A100-PCIE-40GB",
+      "sm_count": 108,
+      "clock_mhz": 1410,
+      "bandwidth_gbps": 1555,
+      "fp32_tflops": 19.5,
+      "memory_gb": 40,
+      "threads_per_sm": 2048,
+      "blocks_per_sm": 32,
+      "registers_per_sm": 65536,
+      "shared_bytes_per_sm": 167936,
+      "shared_bytes_per_block": 166912,
+      "max_threads_per_block": 1024
+    }
+  },
+  "decode_log_efficiency_coefficients": {
+    "P100": {
+      "conv_layout": 0.0,
+      "conv_winograd": 0.0,
+      "conv_tensor_fprop": 0.0,
+      "conv_tensor_dgrad": 0.0,
+      "conv_tensor_wgrad": 0.0,
+      "conv_simt": 0.0,
+      "gemm": -0.19725701338864124,
+      "elementwise": 0.31944866035421327,
+      "normalization": 0.0,
+      "softmax": 0.01067842835372134,
+      "pool": 0.0,
+      "reduction": 0.041213434253703364,
+      "memory": 0.000277950137564921,
+      "other": 0.0,
+      "host_gap": -0.5234468827305542
+    },
+    "V100": {
+      "conv_layout": 0.0,
+      "conv_winograd": 0.0,
+      "conv_tensor_fprop": 0.0,
+      "conv_tensor_dgrad": 0.0,
+      "conv_tensor_wgrad": 0.0,
+      "conv_simt": 0.0,
+      "gemm": -0.17630997096805645,
+      "elementwise": -0.19814420869707805,
+      "normalization": 0.0,
+      "softmax": -0.0035186315143078267,
+      "pool": 0.0,
+      "reduction": -0.020529138849211544,
+      "memory": -0.0005712847117247988,
+      "other": 0.0,
+      "host_gap": -0.8795349545413291
+    },
+    "A100": {
+      "conv_layout": 0.0,
+      "conv_winograd": 0.0,
+      "conv_tensor_fprop": 0.0,
+      "conv_tensor_dgrad": 0.0,
+      "conv_tensor_wgrad": 0.0,
+      "conv_simt": 0.0,
+      "gemm": -2.237275668147379,
+      "elementwise": 3.526614640511637,
+      "normalization": 0.0,
+      "softmax": 0.02923609907626332,
+      "pool": 0.0,
+      "reduction": 0.37523029320395385,
+      "memory": 0.02598460386450115,
+      "other": 0.0,
+      "host_gap": -0.7740423117113547
+    }
+  },
+  "decode_fit_statistics": {
+    "P100": {
+      "samples": 3,
+      "coefficient_l2_norm": 0.6455749903960124,
+      "max_absolute_percentage_error": 11.500000000002819,
+      "mean_absolute_percentage_error": 10.365037716343732,
+      "cases": [
+        {
+          "batch_size": 1,
+          "actual_ms": 994.5276670999999,
+          "paper_ms": 1536.343935699096,
+          "sample_count": 10,
+          "predicted_ms": 1108.8983488164633,
+          "absolute_error_pct": 11.499999999996312
+        },
+        {
+          "batch_size": 2,
+          "actual_ms": 1212.0512628000001,
+          "paper_ms": 1451.962813181392,
+          "sample_count": 10,
+          "predicted_ms": 1072.665367577966,
+          "absolute_error_pct": 11.500000000002819
+        },
+        {
+          "batch_size": 4,
+          "actual_ms": 1287.6659685000002,
+          "paper_ms": 1969.5175990408688,
+          "sample_count": 10,
+          "predicted_ms": 1391.9039856316547,
+          "absolute_error_pct": 8.095113149032063
+        }
+      ]
+    },
+    "V100": {
+      "samples": 3,
+      "coefficient_l2_norm": 0.9188918446905553,
+      "max_absolute_percentage_error": 11.500000000001421,
+      "mean_absolute_percentage_error": 9.6147200076441,
+      "cases": [
+        {
+          "batch_size": 1,
+          "actual_ms": 927.5055211000001,
+          "paper_ms": 1611.3283305226082,
+          "sample_count": 10,
+          "predicted_ms": 873.3006142253896,
+          "absolute_error_pct": 5.8441600229317
+        },
+        {
+          "batch_size": 2,
+          "actual_ms": 973.0640311999999,
+          "paper_ms": 1552.9484397063204,
+          "sample_count": 10,
+          "predicted_ms": 861.1616676120079,
+          "absolute_error_pct": 11.499999999999178
+        },
+        {
+          "batch_size": 4,
+          "actual_ms": 964.2174848000001,
+          "paper_ms": 2066.262010871535,
+          "sample_count": 10,
+          "predicted_ms": 1075.1024955520138,
+          "absolute_error_pct": 11.500000000001421
+        }
+      ]
+    },
+    "A100": {
+      "samples": 3,
+      "coefficient_l2_norm": 4.264256378354836,
+      "max_absolute_percentage_error": 11.50000000000011,
+      "mean_absolute_percentage_error": 11.499999999999588,
+      "cases": [
+        {
+          "batch_size": 1,
+          "actual_ms": 1192.549184,
+          "paper_ms": 1403.2113685500944,
+          "sample_count": 10,
+          "predicted_ms": 1055.4060278400104,
+          "absolute_error_pct": 11.499999999999122
+        },
+        {
+          "batch_size": 2,
+          "actual_ms": 1192.0078747,
+          "paper_ms": 1461.4218871033622,
+          "sample_count": 10,
+          "predicted_ms": 1054.9269691095055,
+          "absolute_error_pct": 11.499999999999533
+        },
+        {
+          "batch_size": 4,
+          "actual_ms": 1194.3817881,
+          "paper_ms": 1965.1317861377056,
+          "sample_count": 10,
+          "predicted_ms": 1331.7356937315012,
+          "absolute_error_pct": 11.50000000000011
+        }
+      ]
+    }
+  }
+}

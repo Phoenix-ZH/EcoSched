@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "normalization": "one A16, same workload and local batch, fixed total work",
+  "groups": [
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.6285310983678875,
+          0.028816889474992512,
+          -0.01000000000000013
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.5617071745561115,
+          0.035162482208455484,
+          -0.02200908742280834
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.35962946625496245,
+          0.0065190374702863915,
+          0.03999999999999986
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.3762894483723339,
+          0.005615153576890106,
+          0.05474816019401726
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "cycleGAN-Pytorch",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "measured_response": {
+        "coefficients": [
+          0.25041023378914873,
+          0.0073463399730595395,
+          0.049999999999999885
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.24299657568944769,
+          0.007128843858702324,
+          0.027405697879805086
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "P100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.6222222222222226,
+          0.051967663652037484,
+          -4.163336342344337e-17
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.5546579531736979,
+          0.047266594391822715,
+          -0.004528942360046551
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "V100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.6529914529914533,
+          0.09051800461230679,
+          1.3530843112619095e-16
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.5784152512915206,
+          0.09561856963607827,
+          -0.020063289179206977
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "ResNet50-Pytorch",
+      "batch_size": 256,
+      "gpu": "A100-PCIE-40GB",
+      "measured_response": {
+        "coefficients": [
+          0.6313390313390315,
+          0.10660342547934183,
+          -9.020562075079397e-17
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.5595276207831974,
+          0.11043945676923156,
+          -0.017364650110917063
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "P100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.6179846938775514,
+          0.024216056820916744,
+          -1.5265566588595902e-16
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.5542163026737836,
+          0.02887695682981525,
+          -0.009559746226264513
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "V100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.5100765306122451,
+          0.02829538333235411,
+          -7.979727989493313e-17
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.4557218059417284,
+          0.0265994374500818,
+          0.0030358775997394337
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "Transformers-Pytorch",
+      "batch_size": 1024,
+      "gpu": "A100-PCIE-40GB",
+      "measured_response": {
+        "coefficients": [
+          0.5244897959183678,
+          0.029731882272165264,
+          -3.903127820947816e-16
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.4693417129915361,
+          0.023753926309465562,
+          0.013629370427818283
+        ],
+        "count_domain": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "P100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.7825442726580104,
+          0.03237340903716248,
+          0.001931587156783076
+        ],
+        "count_domain": [
+          1,
+          4
+        ],
+        "data_kind": "model_generated",
+        "parameter_basis": "configured_component_variation"
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.7270181578522658,
+          0.023946239284428968,
+          0.003422804004793132
+        ],
+        "count_domain": [
+          1,
+          4
+        ],
+        "parameter_basis": "configured_component_variation"
+      }
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "V100-SXM2-16GB",
+      "measured_response": {
+        "coefficients": [
+          0.6432862416496252,
+          0.025338935809986675,
+          -7.04563374069259e-05
+        ],
+        "count_domain": [
+          1,
+          4
+        ],
+        "data_kind": "model_generated",
+        "parameter_basis": "configured_component_variation"
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.6100407958548156,
+          0.030142712987177217,
+          -0.005477580278728239
+        ],
+        "count_domain": [
+          1,
+          4
+        ],
+        "parameter_basis": "configured_component_variation"
+      }
+    },
+    {
+      "workload": "Qwen",
+      "batch_size": 2,
+      "gpu": "A100-PCIE-40GB",
+      "measured_response": {
+        "coefficients": [
+          0.5076772035520786,
+          0.02129353508060414,
+          -0.0012813531148835628
+        ],
+        "count_domain": [
+          1,
+          4
+        ],
+        "data_kind": "model_generated",
+        "parameter_basis": "configured_component_variation"
+      },
+      "estimated_response": {
+        "coefficients": [
+          0.4860563591240601,
+          0.015025818212799323,
+          0.0019330447318734684
+        ],
+        "count_domain": [
+          1,
+          4
+        ],
+        "parameter_basis": "configured_component_variation"
+      }
+    }
+  ]
+}

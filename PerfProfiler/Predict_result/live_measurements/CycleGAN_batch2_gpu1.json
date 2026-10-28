@@ -1,0 +1,425 @@
+{
+  "origin": "nvml_workload_iteration_recording",
+  "econ_j": 80.79104330099625,
+  "econ_kwh": 2.244195647249896e-05,
+  "sampled_energy_j": 80.79104330099625,
+  "sampled_steps": 10,
+  "gpu_count": 1,
+  "windows": [
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 5.868206096187234,
+          "mean_power_w": 41.79052384943082,
+          "max_sampling_gap_s": 0.025802336633205414,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 5.868206096187234
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.410072780208642,
+          "mean_power_w": 60.02545918549193,
+          "max_sampling_gap_s": 0.025802336633205414,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.410072780208642
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.488360087153115,
+          "mean_power_w": 60.53203140820191,
+          "max_sampling_gap_s": 0.0299777090549469,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.488360087153115
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.347075167812408,
+          "mean_power_w": 59.538070668058786,
+          "max_sampling_gap_s": 0.031176473945379257,
+          "integrated_segments": 5
+        }
+      ],
+      "energy_per_distributed_step_j": 8.347075167812408
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.185039986258374,
+          "mean_power_w": 58.510595225683055,
+          "max_sampling_gap_s": 0.031176473945379257,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.185039986258374
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.52926442248188,
+          "mean_power_w": 60.827929061376025,
+          "max_sampling_gap_s": 0.02651570364832878,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.52926442248188
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.40877256687358,
+          "mean_power_w": 58.731177407227726,
+          "max_sampling_gap_s": 0.028835158795118332,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.40877256687358
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.188182332532481,
+          "mean_power_w": 57.69832601352904,
+          "max_sampling_gap_s": 0.028835158795118332,
+          "integrated_segments": 6
+        }
+      ],
+      "energy_per_distributed_step_j": 8.188182332532481
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.357498593367806,
+          "mean_power_w": 59.36990166548724,
+          "max_sampling_gap_s": 0.025853421539068222,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.357498593367806
+    },
+    {
+      "steps": 1,
+      "device_integrals": [
+        {
+          "energy_j": 8.008571268120734,
+          "mean_power_w": 56.88168981555302,
+          "max_sampling_gap_s": 0.025853421539068222,
+          "integrated_segments": 7
+        }
+      ],
+      "energy_per_distributed_step_j": 8.008571268120734
+    }
+  ],
+  "between_window_step_energy_stdev_j": 0.7925930487159036,
+  "normalized_econ": null,
+  "workload": "CycleGAN",
+  "batch_size_per_gpu": 2,
+  "global_batch_size": 2,
+  "gpu_indices": [
+    0
+  ],
+  "iterations": 10,
+  "warmup_iterations": 10,
+  "sample_interval_s": 0.02,
+  "elapsed_s": 1.4077149368822575,
+  "iteration_durations_s": [
+    0.14041953906416893,
+    0.14010842889547348,
+    0.1402292288839817,
+    0.1401972733438015,
+    0.13988987728953362,
+    0.1402195431292057,
+    0.1431739144027233,
+    0.14191368967294693,
+    0.14076995849609375,
+    0.14079348370432854
+  ],
+  "energy_per_iteration_j": [
+    5.868206096187234,
+    8.410072780208642,
+    8.488360087153115,
+    8.347075167812408,
+    8.185039986258374,
+    8.52926442248188,
+    8.40877256687358,
+    8.188182332532481,
+    8.357498593367806,
+    8.008571268120734
+  ],
+  "mean_power_w": 57.39162182929489,
+  "workload_config": {
+    "input_shape": [
+      2,
+      3,
+      128,
+      128
+    ],
+    "batch_size_per_gpu": 2,
+    "base_channels": 32,
+    "residual_blocks": 9
+  },
+  "device_records": [
+    {
+      "index": 0,
+      "name": "NVIDIA A16",
+      "uuid": "GPU-14bbb58e-fef1-d144-1908-6792cb6428a6",
+      "energy_j": 80.79104330099625,
+      "mean_power_w": 57.39162182929489,
+      "sample_count": 58,
+      "max_sampling_gap_s": 0.031176473945379257,
+      "mean_gpu_utilization_pct": 89.82758620689656,
+      "power_samples": [
+        {
+          "relative_time_s": -0.004177570343017578,
+          "power_w": 27.362
+        },
+        {
+          "relative_time_s": 0.0213039368391037,
+          "power_w": 27.362
+        },
+        {
+          "relative_time_s": 0.04467509686946869,
+          "power_w": 27.362
+        },
+        {
+          "relative_time_s": 0.06785234436392784,
+          "power_w": 27.362
+        },
+        {
+          "relative_time_s": 0.09141907095909119,
+          "power_w": 60.694
+        },
+        {
+          "relative_time_s": 0.11605655774474144,
+          "power_w": 60.694
+        },
+        {
+          "relative_time_s": 0.14185889437794685,
+          "power_w": 60.694
+        },
+        {
+          "relative_time_s": 0.16515258327126503,
+          "power_w": 60.694
+        },
+        {
+          "relative_time_s": 0.18831925466656685,
+          "power_w": 59.733
+        },
+        {
+          "relative_time_s": 0.21150579303503036,
+          "power_w": 59.733
+        },
+        {
+          "relative_time_s": 0.2361903302371502,
+          "power_w": 59.733
+        },
+        {
+          "relative_time_s": 0.26165883615612984,
+          "power_w": 59.733
+        },
+        {
+          "relative_time_s": 0.28698431700468063,
+          "power_w": 60.598
+        },
+        {
+          "relative_time_s": 0.31164292246103287,
+          "power_w": 60.598
+        },
+        {
+          "relative_time_s": 0.3363896496593952,
+          "power_w": 60.598
+        },
+        {
+          "relative_time_s": 0.3637045808136463,
+          "power_w": 60.598
+        },
+        {
+          "relative_time_s": 0.38885489478707314,
+          "power_w": 60.406
+        },
+        {
+          "relative_time_s": 0.41657718643546104,
+          "power_w": 60.406
+        },
+        {
+          "relative_time_s": 0.44655489549040794,
+          "power_w": 60.406
+        },
+        {
+          "relative_time_s": 0.4753063768148422,
+          "power_w": 59.19
+        },
+        {
+          "relative_time_s": 0.5044800527393818,
+          "power_w": 59.19
+        },
+        {
+          "relative_time_s": 0.5310707129538059,
+          "power_w": 59.19
+        },
+        {
+          "relative_time_s": 0.5622471868991852,
+          "power_w": 59.19
+        },
+        {
+          "relative_time_s": 0.5854547321796417,
+          "power_w": 57.554
+        },
+        {
+          "relative_time_s": 0.6087351851165295,
+          "power_w": 57.554
+        },
+        {
+          "relative_time_s": 0.6320514716207981,
+          "power_w": 57.554
+        },
+        {
+          "relative_time_s": 0.6570786684751511,
+          "power_w": 57.554
+        },
+        {
+          "relative_time_s": 0.6824151687324047,
+          "power_w": 61.175
+        },
+        {
+          "relative_time_s": 0.705785509198904,
+          "power_w": 61.175
+        },
+        {
+          "relative_time_s": 0.7294456101953983,
+          "power_w": 61.175
+        },
+        {
+          "relative_time_s": 0.7555687241256237,
+          "power_w": 61.175
+        },
+        {
+          "relative_time_s": 0.7820844277739525,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.8053077012300491,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.8289085924625397,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.8522042445838451,
+          "power_w": 60.502
+        },
+        {
+          "relative_time_s": 0.877312608063221,
+          "power_w": 58.772
+        },
+        {
+          "relative_time_s": 0.9025775715708733,
+          "power_w": 58.772
+        },
+        {
+          "relative_time_s": 0.9258944056928158,
+          "power_w": 58.772
+        },
+        {
+          "relative_time_s": 0.9492588527500629,
+          "power_w": 58.772
+        },
+        {
+          "relative_time_s": 0.97779156640172,
+          "power_w": 56.528
+        },
+        {
+          "relative_time_s": 1.0066267251968384,
+          "power_w": 56.528
+        },
+        {
+          "relative_time_s": 1.0306939966976643,
+          "power_w": 56.528
+        },
+        {
+          "relative_time_s": 1.056354146450758,
+          "power_w": 56.528
+        },
+        {
+          "relative_time_s": 1.082290194928646,
+          "power_w": 59.445
+        },
+        {
+          "relative_time_s": 1.1059295795857906,
+          "power_w": 59.445
+        },
+        {
+          "relative_time_s": 1.1298424936830997,
+          "power_w": 59.445
+        },
+        {
+          "relative_time_s": 1.1550262160599232,
+          "power_w": 59.445
+        },
+        {
+          "relative_time_s": 1.1801340766251087,
+          "power_w": 59.574
+        },
+        {
+          "relative_time_s": 1.2035417594015598,
+          "power_w": 59.574
+        },
+        {
+          "relative_time_s": 1.2270457223057747,
+          "power_w": 59.574
+        },
+        {
+          "relative_time_s": 1.2505070976912975,
+          "power_w": 59.574
+        },
+        {
+          "relative_time_s": 1.2763605192303658,
+          "power_w": 55.149
+        },
+        {
+          "relative_time_s": 1.3020451180636883,
+          "power_w": 55.149
+        },
+        {
+          "relative_time_s": 1.325315449386835,
+          "power_w": 55.149
+        },
+        {
+          "relative_time_s": 1.3485811538994312,
+          "power_w": 55.149
+        },
+        {
+          "relative_time_s": 1.3719052597880363,
+          "power_w": 60.117
+        },
+        {
+          "relative_time_s": 1.3961081504821777,
+          "power_w": 60.117
+        },
+        {
+          "relative_time_s": 1.40915222838521,
+          "power_w": 60.117
+        }
+      ]
+    }
+  ],
+  "output": "Predict_result/live_measurements/CycleGAN_batch2_gpu1.json"
+}
