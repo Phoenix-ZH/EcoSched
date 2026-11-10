@@ -2,6 +2,20 @@
 
 [English](README.md) | [简体中文](README_zh.md)
 
+EcoSched is an electricity-cost-aware scheduler for machine learning workloads in geographically distributed, heterogeneous GPU clusters. PerfProfiler estimates execution time and energy consumption across GPU configurations, and CostPlanner uses these estimates, GPU availability, and regional electricity prices to choose where to run each workload and which GPUs to allocate while meeting its timing constraints.
+
+## Experimental results
+
+**Performance prediction.** Using profiles collected on an A16, PerfProfiler estimates iteration times for ResNet50, CycleGAN, and Transformer and inference request latency for Qwen3-1.7B on P100, V100, and A100 GPUs. Across the tested GPU models and batch sizes, each workload's mean estimation error is at most **10.6%**.
+
+![Measured and estimated times for ResNet50, CycleGAN, Transformer, and Qwen3-1.7B across GPU models and batch sizes](img/Performance_Prediction.png)
+
+**Electricity cost savings.** In a 24-hour simulation driven by Alibaba Cluster Trace, EcoSched has the lowest electricity cost in every hour compared with LCF, TanGo, LEF, and MAST. Across the paper's experiments with different workload counts, EcoSched reduces total electricity costs by **28.3%–69.1%** relative to these baselines.
+
+![Hourly electricity costs for EcoSched and four baseline schedulers](img/Electricity_Hour_Costs.png)
+
+## Usage
+
 Unless a section explicitly uses `cd`, run all commands from the project root, where this README is located. File paths are relative to that root.
 
 ## PerfProfiler

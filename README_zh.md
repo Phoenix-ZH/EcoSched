@@ -2,7 +2,21 @@
 
 [English](README.md) | [简体中文](README_zh.md)
 
-本文中的命令默认在项目根目录（本 README 所在目录）执行。文件路径均相对于项目根目录；明确标注 `cd` 的章节除外。
+EcoSched 是面向地理分布式异构 GPU 集群的机器学习负载调度器，以降低电费为目标。PerfProfiler 估算负载在不同 GPU 配置下的执行时间和耗电量，CostPlanner 则结合这些估算结果、GPU 可用情况和各地区电价，在满足负载时间约束的前提下选择运行区域、GPU 型号和数量。
+
+## 实验结果
+
+**性能预测。** PerfProfiler 利用在 A16 上采集的性能数据，预测 ResNet50、CycleGAN 和 Transformer 在 P100、V100 和 A100 上的单次迭代时间，以及 Qwen3-1.7B 在这些 GPU 上的推理请求延迟。在所测试的 GPU 型号和批大小下，四种负载各自的平均估计误差均不超过 **10.6%**。
+
+![四种负载在不同 GPU 型号和批大小下的实测与预测耗时](img/Performance_Prediction.png)
+
+**电费节省。** 在基于 Alibaba Cluster Trace 的 24 小时仿真中，EcoSched 每小时的电费均低于 LCF、TanGo、LEF 和 MAST。在论文针对不同负载数量开展的实验中，EcoSched 相比这些基线降低了 **28.3%–69.1%** 的总电费。
+
+![EcoSched 与四种基线调度器的逐小时电费对比](img/Electricity_Hour_Costs.png)
+
+## 使用方法
+
+除非某节明确使用 `cd` 切换目录，否则请在项目根目录（本 README 所在目录）执行所有命令。文件路径均相对于项目根目录。
 
 ## PerfProfiler
 
